@@ -1,0 +1,6 @@
+{
+    "typescript.tsdk": "./node_modules/typescript/lib", 
+    "editor.fontSize": 12, 
+    "editor.cursorStyle": "line",
+    "editor.wordWrap": true
+}

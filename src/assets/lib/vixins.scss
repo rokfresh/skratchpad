@@ -1,0 +1,46 @@
+// ### mixins ###
+
+// ! screen size
+@mixin screen-size($size) {
+	 @if $size==phone-only{
+		@media (max-width: 479px) {
+			 @content;
+		}
+	}
+	@else if $size==tab-portrait-up {
+		 @media (min-width: 480px){
+			@content;
+		}
+	}
+	@else if $size==tab-landscape-up {
+		 @media (min-width: 900px){
+			@content;
+		}
+	}
+	@else if $size==desktop-up {
+		 @media (min-width: 1200px){
+			@content;
+		}
+	}
+}
+
+// ** padding mixins **
+@mixin x-padding($val) {
+	padding-left: $val;
+	padding-right: $val;
+}
+
+@mixin y-padding($val) {
+	padding-top: $val;
+	padding-bottom: $val;
+}
+
+// ### fonts ###
+$font-alpha: "Nunito Sans", sans-serif;
+$font-beta: "Montserrat", sans-serif;
+$font-gamma: "Reem Kufi", sans-serif;
+
+// ### color palette ###
+$color-alpha: #93c2f4;
+$color-beta: #60061e;
+$color-gamma: #ab6dee;

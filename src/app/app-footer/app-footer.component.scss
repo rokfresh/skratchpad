@@ -1,0 +1,107 @@
+@import "../../assets/lib/vixins";
+
+:host {
+  a {
+    color: inherit;
+    &:focus,
+    &:hover {
+      color: $color-alpha;
+    }
+  }
+  flex-direction: column;
+  margin-top: auto;
+}
+
+.footer-copy,
+.large-foot-wrap,
+.mobile-foot-social,
+.mobile-foot-sponsors,
+.mobile-foot-wrap,
+:host {
+  display: flex;
+}
+
+// ** LARGE FOOTER **
+.large-foot-wrap {
+  // display
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  // box
+  height: 4rem;
+  width: 100%;
+  margin-top: 3rem;
+  padding: 0.3rem 0.5rem;
+  // decor
+  background-color: #333;
+  color: #fff;
+  .large-foot-social,
+  .large-foot-sponsors {
+    display: inline-flex;
+  }
+  .large-foot-social {
+    // box
+    // text
+    font-size: 2.5em;
+  }
+  .large-foot-sponsors {
+    // box
+    max-height: 100%;
+    margin-left: auto;
+    img {
+      height: 4rem;
+      margin: 0 0.6rem;
+    }
+  }
+}
+
+.foot-icon {
+  margin: 0 0.8rem;
+}
+
+.mobile-foot-wrap {
+  // display
+  flex-direction: column;
+  // decor
+  background: #333;
+  // box
+  height: auto;
+  width: 100%;
+  padding-top: .5rem;
+  .mobile-foot-social {
+    // display
+    justify-content: center;
+    // box
+    width: 100%;
+    // decor
+    color: #fff;
+    // text
+    font-size: 2em;
+  }
+  .mobile-foot-sponsors {
+    // display
+    justify-content: center;
+    // box
+    max-height: auto;
+    margin: 1rem;
+    img {
+      height: 3rem;
+      margin: 0 1rem;
+    }
+  }
+}
+
+.footer-copy {
+  // display
+  justify-content: center;
+  align-items: center;
+  // decor
+  background-color: #000;
+  color: #fff;
+  // text
+  font-family: $font-gamma;
+  // box
+  height: auto;
+  padding-bottom: .3rem;
+  width: 100%;
+}

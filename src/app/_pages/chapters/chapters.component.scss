@@ -1,0 +1,51 @@
+@import "../../../assets/lib/vixins";
+
+// (shared) 
+// display: flex
+:host,
+.chapter-heading,
+.chapter-crew {
+  display: flex;
+}
+
+:host {
+  // display
+  flex-direction: column;
+  // box
+  margin: 0 3rem;
+  // text
+  font-family: $font-alpha;
+}
+
+.sp-chapter {
+  // box
+  margin: .5rem 1rem;
+  border: 1px solid #93c2f4;
+}
+
+// (shared)
+// padding: .5rem
+.chapter-heading,
+.chapter-loc {
+  @include x-padding(1rem);
+}
+
+.chapter-heading {
+  // display
+  align-items: center;
+  // box
+  width: auto;
+  height: 3rem;
+  // decor
+  background: $color-alpha;
+  // text
+  font-family: $font-gamma;
+  font-size: 2rem;
+}
+
+.chapter-loc {
+  // decor 
+  background: #eee;
+  // text
+  font-family: $font-beta;
+}

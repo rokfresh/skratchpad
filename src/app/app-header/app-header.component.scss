@@ -1,0 +1,144 @@
+@import "./../../assets/lib/vixins";
+:host {
+  width: 100%;
+}
+
+.large-nav-wrap,
+.large-nav-row,
+.large-nav-item,
+.large-nav-vinyl {
+  display: flex;
+}
+
+.active-link {
+  // decor
+  color: $color-alpha;
+}
+
+// ** DESKTOP HEADER / NAVIGATION
+.large-nav-wrap {
+  // box
+  margin-bottom: 50px;
+  // dimensions
+  height: 145px;
+  width: 100%;
+  flex-direction: column;
+}
+
+.logo-row {
+  // box
+  box-shadow: 0 5px 5px 1px #000, -30px 0 70px 20px #000 inset;
+  // decor
+  background-image: url("../../assets/img/records-237579_1280.jpeg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  // dimensions
+  height: 100%;
+  width: 100%;
+}
+
+.header-logo {
+  // box
+  height: 100%;
+  width: 100%;
+  // decor
+  background-image: url("./../../assets/img/skratchpad_logos/sp_logo_white(drop-shadow_black).png");
+  background-size: auto 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.large-nav-row {
+  // box
+  padding: 0 20px;
+  width: 100%;
+  // display
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.large-nav-item {
+  // decor
+  background-color: #000;
+  color: #000;
+  // box
+  border-bottom: #ccc solid 1px;
+  border-left: #777 solid 2px;
+  border-right: #777 solid 2px;
+  border-radius: 4px;
+  height: 100%;
+  width: 12rem;
+  // display
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  // text
+  font-size: 1.3em;
+  text-align: center;
+  //position
+  position: relative;
+}
+
+.large-nav-link {
+  color: #fff;
+  &:hover {
+    color: #3b3;
+  }
+}
+
+.large-nav-vinyl {
+  // decor
+  background-color: rgba(255, 255, 255, 100%);
+  background-image: url(../../assets/img/vinyl_1.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  // box
+  border-radius: 100%;
+  height: 12rem;
+  width: 100%;
+  // position
+  position: absolute;
+  left: 50%;
+  top: -5px;
+  z-index: -10;
+  // effects
+  transform: translate(-50%, -50%);
+  transition: top 0.6s ease;
+}
+
+// ** MOBILE HEADER / NAVIGATION **
+.mobile-nav-wrap {
+  // box
+  height: 60px;
+}
+
+.navbar-header {
+  // box
+  height: 60px;
+  box-shadow: 0 1px 10px 2px #000, 0 0 10px 3px #000 inset;
+  // decor
+  background-color: #000;
+  background-image: url("./../../assets/img/skratchpad_logos/sp_logo_white(drop-shadow_black).png"), url("../../assets/img/records-237579_1280.jpeg");
+  background-position: 55px center, center;
+  background-size: contain, cover;
+  background-repeat: no-repeat;
+}
+
+.navbar-toggle {
+  // decor
+  background-color: #fff;
+  color: $color-alpha;
+}
+
+.navbar-collapse {
+  // box
+  border-top: none;
+}
+
+.navbar.affix {
+  // box
+  width: 100%;
+  // position
+}

@@ -1,0 +1,53 @@
+@import "../../../assets/lib/vixins";
+
+:host, 
+.highlight-box,
+.highlight-box-content, 
+.recent-posts, 
+.past-post {
+    display: flex;
+}
+
+:host {
+    // box 
+    height: 100%;
+    width: 100;
+    // display
+    flex-direction: column;
+}
+
+.highlight-box {
+    // display
+    justify-content: center;
+
+   // box
+   height: auto;
+   width: 100%;
+
+    .highlight-box-content {
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+}
+
+.recent-posts {
+    // box 
+    height: auto;
+    width: 100%;
+
+    // decor 
+    background: #eee;
+
+    .recent-post-heading {
+        // box 
+        height: auto;
+        width: 100%;
+
+        // decor 
+        background: $font-beta;
+        color: #fff;
+
+
+    }
+}

@@ -1,0 +1,11 @@
+@import "../assets/lib/vixins";
+
+:host {
+  // display
+  display: flex;
+  flex-direction: column;
+
+  // box
+  min-height: 100%;
+
+}
