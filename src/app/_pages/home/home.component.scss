@@ -19,10 +19,12 @@
 .highlight-box {
     // display
     justify-content: center;
-
+    align-self: center;
    // box
-   height: auto;
-   width: 100%;
+   padding: 2rem;
+
+   // decor 
+   background-color: #ddd;
 
     .highlight-box-content {
         justify-content: center;
