@@ -44,7 +44,7 @@ a:hover {
   // box 
   height: 340px;
   width: 600px;
-  @include screen-size(tablet) {
+  @include screen-size(phone) {
     height: auto;
     width: auto;
   }
