@@ -52,7 +52,9 @@ a:hover {
 
 .content-box {
   // box
-  width: 90%;
+  height: auto;
+  width: 100%;
+  padding-bottom: 2rem;
   // display 
   align-self: center;
   // text 
@@ -61,8 +63,8 @@ a:hover {
 
 .box-heading {
   // box
-  height: 3rem;
-  width: 90%;
+  height: 4rem;
+  width: 100%;
   margin-bottom: 2rem;
   @include x-padding(1.5rem);
   // decor 

@@ -8,7 +8,12 @@
       color: $color-alpha;
     }
   }
+  // display 
   flex-direction: column;
+
+  // box
+  border-top: solid .5rem $color-beta;
+  height: auto;
   margin-top: auto;
 }
 
@@ -18,6 +23,7 @@
 .mobile-foot-sponsors,
 .mobile-foot-wrap,
 :host {
+  // display
   display: flex;
 }
 
@@ -28,9 +34,8 @@
   justify-content: space-between;
   align-items: center;
   // box
-  height: 4rem;
+  height: auto;
   width: 100%;
-  margin-top: 3rem;
   padding: 0.3rem 0.5rem;
   // decor
   background-color: #333;
@@ -40,9 +45,8 @@
     display: inline-flex;
   }
   .large-foot-social {
-    // box
     // text
-    font-size: 2.5em;
+    font-size: 2em;
   }
   .large-foot-sponsors {
     // box

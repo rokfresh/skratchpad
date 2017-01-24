@@ -10,10 +10,6 @@
   display: flex;
 }
 
-.active-link {
-  // decor
-  color: $color-alpha;
-}
 
 // ** DESKTOP HEADER / NAVIGATION
 .large-nav-wrap {
@@ -29,7 +25,7 @@
   // box
   box-shadow: 0 5px 5px 1px #000, -30px 0 70px 20px #000 inset;
   // decor
-  background-image: url("../../assets/img/records-237579_1280.jpeg");
+  background-image: url("./assets/img/records-237579_1280.jpeg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -43,7 +39,7 @@
   height: 100%;
   width: 100%;
   // decor
-  background-image: url("./../../assets/img/skratchpad_logos/sp_logo_white(drop-shadow_black).png");
+  background-image: url("./assets/img/skratchpad_logos/sp_logo_white(drop-shadow_black).png");
   background-size: auto 100%;
   background-position: center center;
   background-repeat: no-repeat;
@@ -83,14 +79,14 @@
 .large-nav-link {
   color: #fff;
   &:hover {
-    color: #3b3;
+    color: #aaa;
   }
 }
 
 .large-nav-vinyl {
   // decor
   background-color: rgba(255, 255, 255, 100%);
-  background-image: url(../../assets/img/vinyl_1.svg);
+  background-image: url("./assets/img/vinyl_1.svg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -120,7 +116,7 @@
   box-shadow: 0 1px 10px 2px #000, 0 0 10px 3px #000 inset;
   // decor
   background-color: #000;
-  background-image: url("./../../assets/img/skratchpad_logos/sp_logo_white(drop-shadow_black).png"), url("../../assets/img/records-237579_1280.jpeg");
+  background-image: url("./assets/img/skratchpad_logos/sp_logo_white(drop-shadow_black).png"), url("./assets/img/records-237579_1280.jpeg");
   background-position: 55px center, center;
   background-size: contain, cover;
   background-repeat: no-repeat;
@@ -130,6 +126,14 @@
   // decor
   background-color: #fff;
   color: $color-alpha;
+  
+  // box 
+  width: 35px;
+  padding: 3px;
+
+  .navbar-btn-img {
+    @include evenXY(100%);
+  }
 }
 
 .navbar-collapse {
@@ -141,4 +145,9 @@
   // box
   width: 100%;
   // position
+}
+
+.active-link {
+  // decor
+  color: $color-alpha;
 }

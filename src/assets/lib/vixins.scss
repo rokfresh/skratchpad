@@ -24,7 +24,7 @@
 	}
 }
 
-// ** padding mixins **
+// ** box mixins **
 @mixin x-padding($val) {
 	padding-left: $val;
 	padding-right: $val;
@@ -33,6 +33,11 @@
 @mixin y-padding($val) {
 	padding-top: $val;
 	padding-bottom: $val;
+}
+
+@mixin evenXY($val) {
+	height: $val;
+	width: $val;
 }
 
 // ### fonts ###

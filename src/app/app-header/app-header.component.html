@@ -50,12 +50,12 @@
     <div class="container-fluid">
       <div class="navbar-header">
         <div class="navbar-brand nav-logo"></div>
-        <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#siteNav" aria-expanded="false" type="button">
+        <button class="navbar-toggle collapsed" type="button" (click)="isCollapsed = !isCollapsed">
           <span class="sr-only">toggle navigation</span>
-          <img src=".,/../assets/img/vinyl_1.svg" alt="">
+          <img src="../../assets/img/vinyl_1.svg" alt="vinyl button" class="navbar-btn-img">
         </button>
       </div>
-      <div class="navbar-collapse collapse" id="siteNav">
+      <div class="navbar-collapse collapse" id="siteNav" [collapse]="isCollapsed">
         <ul class="nav navbar-nav">
           <li>
             <a href="#" routerLink="/home" routerLinkActive="active-link" >Home</a>

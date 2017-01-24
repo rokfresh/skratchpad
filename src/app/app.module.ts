@@ -5,6 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 
+import { CollapseModule } from 'ng2-bootstrap';
+
 import { AppComponent } from './app.component';
 import { AppBodyComponent } from './app-body/app-body.component';
 import { AppHeaderComponent } from './app-header/app-header.component';
@@ -36,13 +38,14 @@ const appRoutes: Routes = [
     PostsComponent,
     MediaComponent, 
     FourOhFourComponent, 
-    AboutComponent
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule, 
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    CollapseModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
