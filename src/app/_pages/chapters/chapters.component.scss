@@ -1,5 +1,4 @@
 @import "../../../assets/lib/vixins";
-
 // (shared) 
 // display: flex
 :host,
@@ -39,13 +38,11 @@
   // decor
   background: $color-alpha;
   // text
-  font-family: $font-gamma;
+  font-family: $font-beta;
   font-size: 2rem;
 }
 
 .chapter-loc {
   // decor 
   background: #eee;
-  // text
-  font-family: $font-beta;
 }

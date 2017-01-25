@@ -10,8 +10,7 @@
 
 :host {
     // box 
-    height: 100%;
-    width: 100;
+    @include evenXY(100%);
     // display
     flex-direction: column;
 }
@@ -21,19 +20,31 @@
     justify-content: center;
     align-self: center;
    // box
+   height: 360px;
+   width: 70%;
+   margin: 0 1.2rem;
    padding: 2rem;
+   @include screen-size(phone){
+       height: auto;
+       width: 100%;
+       padding: .6rem;
+   }
 
    // decor 
-   background-color: #ddd;
+   background-color: #444;
 
     .highlight-box-content {
+        // display 
         justify-content: center;
         align-items: center;
+        
+        // box 
+        @include evenXY(100%);
         margin: 0 auto;
     }
 }
 
-.recent-posts {
+.recent-post {
     // box 
     height: auto;
     width: 100%;
@@ -41,15 +52,4 @@
     // decor 
     background: #eee;
 
-    .recent-post-heading {
-        // box 
-        height: auto;
-        width: 100%;
-
-        // decor 
-        background: $font-beta;
-        color: #fff;
-
-
-    }
 }

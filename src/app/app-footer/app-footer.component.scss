@@ -97,13 +97,14 @@
 
 .footer-copy {
   // display
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   // decor
   background-color: #000;
   color: #fff;
   // text
   font-family: $font-gamma;
+  font-size: .8em;
   // box
   height: auto;
   padding-bottom: .3rem;

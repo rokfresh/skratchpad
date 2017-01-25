@@ -42,8 +42,7 @@ a:hover {
 // ## Box-frames
 .yt-box {
   // box 
-  height: 340px;
-  width: 600px;
+  @include evenXY(100%);
   @include screen-size(phone) {
     height: auto;
     width: auto;
