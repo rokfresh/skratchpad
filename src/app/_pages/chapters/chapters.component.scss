@@ -10,8 +10,6 @@
 :host {
   // display
   flex-direction: column;
-  // box
-  margin: 0 3rem;
   // text
   font-family: $font-alpha;
 }
@@ -36,7 +34,8 @@
   width: auto;
   height: 3rem;
   // decor
-  background: $color-alpha;
+  background: $color-beta;
+  color: #fff;
   // text
   font-family: $font-beta;
   font-size: 2rem;

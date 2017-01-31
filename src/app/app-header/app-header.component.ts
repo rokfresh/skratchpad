@@ -6,11 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app-header.component.scss']
 })
 export class AppHeaderComponent implements OnInit {
-  public isCollapsed: boolean = true;
-  
   constructor() { }
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

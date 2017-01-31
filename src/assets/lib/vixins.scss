@@ -7,8 +7,8 @@
 			 @content;
 		}
 	}
-	@else if $size==tablet {
-		 @media (min-width: 680px){
+	@else if $size==tablet-phone {
+		 @media (max-width: 680px){
 			@content;
 		}
 	}

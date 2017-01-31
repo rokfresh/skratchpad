@@ -24,8 +24,8 @@
         "styles.scss"
       ],
       "scripts": [
-        "./assets/lib/jquery/dist/jquery.min.js", 
-        "./assets/lib/bootstrap/dist/js/bootstrap.min.js", 
+        "./assets/lib/jquery/dist/jquery.slim.js",
+        "./assets/lib/bootstrap/js/collapse.js",
         "./assets/lib/skratchpad.js"
       ],
       "environments": {

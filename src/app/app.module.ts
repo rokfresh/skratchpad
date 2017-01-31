@@ -4,8 +4,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
-
-import { CollapseModule } from 'ng2-bootstrap';
+import { MaterialModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { AppBodyComponent } from './app-body/app-body.component';
@@ -44,10 +43,10 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     HttpModule, 
-    RouterModule.forRoot(appRoutes),
-    CollapseModule.forRoot()
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+}

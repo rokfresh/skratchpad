@@ -25,7 +25,7 @@ sans-serif;
 $color-alpha: #93c2f4;
 $color-beta: #60061e;
 $color-gamma: #ab6dee;
-// ## Anchor
+// ## anchor
 a,
 a:active,
 a:focus,
@@ -52,19 +52,24 @@ a:hover {
 .content-box {
   // box
   height: auto;
-  width: 100%;
-  padding-bottom: 2rem;
+  width: 95%;
+  margin: 2rem;
+  padding: 1rem;
+  // decor 
+  background: #eee;
+  box-shadow: 0 0 1rem -0.3rem #777;
   // display 
   align-self: center;
-  // text 
-  font-weight: 500;
+  @include screen-size(phone) {
+    width: 90%;
+  }
 }
 
 .box-heading {
   // box
-  height: 4rem;
+  height: 6rem;
   width: 100%;
-  margin-bottom: 2rem;
+  margin-bottom: 1.6rem;
   @include x-padding(1.5rem);
   // decor 
   background: $color-beta;
@@ -75,5 +80,12 @@ a:hover {
   align-self: center;
   // text
   font-family: $font-gamma;
-  font-size: 1.5em;
+  font-size: 2em;
+}
+
+.multi-sp-bg-box {
+  background:#444;
+  background-image: url("./assets/img/skratchpad_logos/skratchpad_logo-(multi).png");
+  background-size: 75%;
+  background-repeat: repeat-x;
 }

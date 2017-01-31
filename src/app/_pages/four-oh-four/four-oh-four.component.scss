@@ -1,1 +1,17 @@
 @import "../../../assets/lib/vixins";
+
+:host {
+    // display 
+    display: flex;
+    flex-direction: column;
+}
+
+.fof-box {
+    // decor
+    background:rgba(255, 245, 255, .9);
+    border: solid #000 1px;
+
+    p {
+        font-size: 1.2em;
+    }
+}

@@ -21,12 +21,12 @@
     align-self: center;
    // box
    height: 360px;
-   width: 70%;
+   width: 630px;
    margin: 0 1.2rem;
    padding: 2rem;
-   @include screen-size(phone){
+   @include screen-size(tablet-phone){
        height: auto;
-       width: 100%;
+       width: auto;
        padding: .6rem;
    }
 
