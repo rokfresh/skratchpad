@@ -18,6 +18,7 @@ import {AboutComponent} from './_pages/about/about.component';
 
 import {PostsService} from './_pages/posts/posts.service';
 import {PostViewComponent} from './_pages/posts/post-view/post-view.component';
+import { PageNotFoundComponent } from './_pages/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import {PostViewComponent} from './_pages/posts/post-view/post-view.component';
     MediaComponent,
     FourOhFourComponent,
     AboutComponent,
-    PostViewComponent
+    PostViewComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule, 

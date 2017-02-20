@@ -9,44 +9,37 @@ import {MediaComponent} from './_pages/media/media.component';
 import {PostsComponent} from './_pages/posts/posts.component';
 import {PostViewComponent} from './_pages/posts/post-view/post-view.component'
 
-const appRoutes: Routes = [{
+const appRoutes : Routes = [
+  {
     path: "home",
     component: HomeComponent
-  },
-  {
+  }, {
     path: "media",
     component: MediaComponent
-  },
-  {
+  }, {
     path: "chapters",
     component: ChaptersComponent
-  },
-  {
+  }, {
     path: "about",
     component: AboutComponent
-  },
-  {
+  }, {
     path: "posts",
     component: PostsComponent
-  },
-  {
-    path: "posts/:slug", 
+  }, {
+    path: "posts/:slug",
     component: PostViewComponent
-  },
-  {
+  }, {
+    path: "",
+    redirectTo: "home",
+    pathMatch: "full"
+  }, {
     path: "**",
     component: FourOhFourComponent
-  },
-  {
-    path: "",
-    redirectTo: "/home",
-    pathMatch: "full"
   }
 ];
 
-
 @NgModule({
-    imports: [RouterModule.forRoot(appRoutes, {useHash: true})],
-    exports: [RouterModule]
+  imports: [RouterModule.forRoot(appRoutes)],
+  exports: [RouterModule]
 })
 export class AppRoutingModule {}
