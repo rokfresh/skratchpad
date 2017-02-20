@@ -1,8 +1,12 @@
 @import "../../assets/lib/vixins";
 
 :host {
+    // decor
+    background: #eee;
     // box 
     height: 100%;
     width: 100%;
     @include y-padding(0);
+    // display 
+    flex: 1;
 }

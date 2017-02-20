@@ -2,7 +2,7 @@
 // (shared) 
 // display: flex
 :host,
-.chapter-heading,
+.chapter-box,
 .chapter-crew {
   display: flex;
 }
@@ -14,31 +14,22 @@
   font-family: $font-alpha;
 }
 
-.sp-chapter {
-  // box
-  margin: .5rem 1rem;
-  border: 1px solid #93c2f4;
+.chapter-box {
+  // box 
+  height: auto;
+  width: 50%;
+  @include screen-size(phone) {    
+    width: auto;
+  }
+  // display 
+  flex-direction: column;
 }
 
-// (shared)
-// padding: .5rem
-.chapter-heading,
 .chapter-loc {
+  // box 
+  width: 45%;
+  margin-left: auto;
   @include x-padding(1rem);
-}
-
-.chapter-heading {
-  // display
-  align-items: center;
-  // box
-  width: auto;
-  height: 3rem;
-  // decor
-  background: $color-beta;
-  color: #fff;
-  // text
-  font-family: $font-beta;
-  font-size: 2rem;
 }
 
 .chapter-loc {

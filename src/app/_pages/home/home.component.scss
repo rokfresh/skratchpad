@@ -1,55 +1,64 @@
 @import "../../../assets/lib/vixins";
-
-:host, 
+:host,
 .highlight-box,
-.highlight-box-content, 
-.recent-posts, 
-.past-post {
-    display: flex;
+.highlight-box-content,
+.main-content,
+.recent-posts-box {
+  display: flex;
 }
 
 :host {
-    // box 
-    @include evenXY(100%);
-    // display
-    flex-direction: column;
+  // box 
+  @include evenXY(100%);
+  // display
+  flex-direction: column;
 }
 
 .highlight-box {
-    // display
+  // display
+  justify-content: center;
+  align-self: center;
+  // box
+  height: auto;
+  width: 100%;
+  // decor 
+  background-color: #444;
+  .highlight-box-content {
+    // display 
     justify-content: center;
-    align-self: center;
-   // box
-   height: 360px;
-   width: 630px;
-   margin: 0 1.2rem;
-   padding: 2rem;
-   @include screen-size(tablet-phone){
-       height: auto;
-       width: auto;
-       padding: .6rem;
-   }
-
-   // decor 
-   background-color: #444;
-
-    .highlight-box-content {
-        // display 
-        justify-content: center;
-        align-items: center;
-        
-        // box 
-        @include evenXY(100%);
-        margin: 0 auto;
+    align-items: center;
+    // box 
+    height: 360px;
+    width: 630px;
+    margin: 0 1.2rem;
+    padding: 2rem;
+    @include screen-size(tablet-phone) {
+      height: auto;
+      width: auto;
+      padding: .6rem;
     }
+  }
 }
 
-.recent-post {
-    // box 
-    height: auto;
-    width: 100%;
+.main-content {
+  // box
+  width: 100%;
+  // display 
+  flex-direction: row wrap;
+}
 
-    // decor 
-    background: #eee;
+.events-list-box {
+  // display 
+  flex-direction: column;
+}
 
+.recent-posts-box {
+  // box 
+  height: auto;
+  width: 50%;
+  margin-left: auto;
+  // display
+  flex-direction: column;
+  // decor
+  background: #eee;
 }

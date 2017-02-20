@@ -1,1 +1,30 @@
 @import "../../../assets/lib/vixins";
+:host {
+  @include evenXY(100%);
+}
+
+.posts-list-box,
+.post-box {
+  display: flex;
+}
+
+.posts-list-box {
+  // display 
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.post-box {
+  // box
+  height: 7rem;
+  width: 100%;
+  // decor
+  border-left: solid #000 .5px;
+  border-right: solid #000 .5px;
+  border-bottom: solid #000 .6px;
+  .post-box-title {
+    // box 
+    margin-top: auto;
+    padding: 1rem .5rem;
+  }
+}

@@ -2,7 +2,11 @@
 <!-- site header/nav for larger (>=768px) devices-->
 <header class="large-nav-wrap hidden-xs">
   <div class="logo-row">
-    <div class="header-logo"></div>
+    <div class="header-logo">
+      <a class="header-logo-link" routerLink="/home">
+        <img class="img-responsive header-logo-img" src="./assets/img/skratchpad_logos/sp_logo_white(drop-shadow_black).png" alt="Skratchpad logo" />
+      </a>
+    </div>
   </div>
   <div class="large-nav-row">
     <div class="large-nav-item">
@@ -22,7 +26,7 @@
       <div class="large-nav-vinyl"></div>
     </div>
     <div class="large-nav-item">
-      <a routerLink="/shop" routerLinkActive="active-link" class="large-nav-link">Shop</a>
+      <a routerLink="shop" routerLinkActive="active-link" class="large-nav-link">Shop</a>
       <div class="large-nav-vinyl"></div>
     </div>
     <div class="large-nav-item">
@@ -39,7 +43,7 @@
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mobileNav" aria-expanded="false">
           <span class="sr-only">toggle navigation</span>
-          <img src="../../assets/img/vinyl_1.svg" alt="vinyl menu toggle" class="navbar-btn-img">
+          <img src="./assets/img/vinyl_1.svg" alt="vinyl menu toggle" class="navbar-btn-img">
         </button>
       </div>
       <div class="collapse navbar-collapse" id="mobileNav">

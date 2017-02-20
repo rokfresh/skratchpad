@@ -1,52 +1,60 @@
   @import "./../../assets/lib/vixins";
    :host {
+    // box
     height: auto;
     width: 100%;
+    margin-bottom: 45px;
+    // position
+    z-index: 1000;
   }
   
   .large-nav-wrap,
   .large-nav-row,
   .large-nav-item,
-  .large-nav-vinyl {
+  .large-nav-vinyl, 
+  .header-logo {
     display: flex;
   }
   
   // ** DESKTOP HEADER / NAVIGATION
   .large-nav-wrap {
-    // box
-    margin-bottom: 45px;
     // dimensions
     height: 145px;
     width: 100%;
     flex-direction: column;
   }
   
-  .logo-row,
-  .header-logo {
-    @include evenXY(100%);
-  }
   
   .logo-row {
     // box
-    box-shadow: 0 5px 5px 1px #000, -30px 0 70px 20px #000 inset;
+    height: 80%;
     // decor
     background-image: url("./assets/img/records-237579_1280.jpeg");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    // dimensions
+    box-shadow: 0 5px 5px 1px #000, -30px 0 70px 20px #000 inset;
   }
   
   .header-logo {
-    // decor
-    background-image: url("./assets/img/skratchpad_logos/sp_logo_white(drop-shadow_black).png");
-    background-size: auto 100%;
-    background-position: center center;
-    background-repeat: no-repeat;
+    // box
+    height: 100%;
+    width: 100%;
+
+    // display 
+    justify-content: center;
+    .header-logo-link {
+      width: 231px;
+    }
+    .header-logo-img {
+      height: 100%;
+      width: auto;
+    }
   }
   
   .large-nav-row {
     // box
+    height: auto;
     padding: 0 20px;
     width: 100%;
     // display
@@ -59,9 +67,9 @@
     background-color: #000;
     color: #000;
     // box
-    border-bottom: #666 solid 1px;
-    border-left: #777 solid 2px;
-    border-right: #777 solid 2px;
+    border-bottom: #aaa solid 0.5px;
+    border-left: #777 solid 1px;
+    border-right: #777 solid 1px;
     border-radius: 1px;
     height: 100%;
     width: 12rem;
@@ -70,6 +78,7 @@
     align-items: center;
     justify-content: center;
     // text
+    font-family: $font-beta;
     font-size: 1.3em;
     text-align: center;
     //position
@@ -79,13 +88,13 @@
   .large-nav-link {
     color: #fff;
     &:hover {
-      color: #aaa;
+      color: #ffd700;
     }
   }
   
   .large-nav-vinyl {
     // decor
-    background-color: rgba(255, 255, 255, 100%);
+    background-color: rgba(255, 255, 255, 0);
     background-image: url("./assets/img/vinyl_1.svg");
     background-size: contain;
     background-position: center;
@@ -98,7 +107,7 @@
     position: absolute;
     left: 50%;
     top: -5px;
-    z-index: -10;
+    z-index: -100;
     // effects
     transform: translate(-50%, -50%);
     transition: top 0.6s ease;
@@ -127,6 +136,7 @@
       background-color: #fff;
       color: $color-alpha;
       // box 
+      border-radius: 50%;
       width: 35px;
       padding: 3px;
     }
@@ -143,23 +153,19 @@
   .navbar-nav {
     background: #444;
   }
-
+  
   .navbar-nav {
     // box 
     width: auto;
     margin-top: 0;
     margin-bottom: 0;
   }
-
+  
   .mobile-nav-item {
-    // box 
-    border: solid 1px #fff;
-
     // text
-    font-family: $font-gamma;
+    font-family: $font-beta;
     font-size: 2.4rem;
     text-align: center;
-
     &:hover {
       background: $color-alpha;
       color: #fff;
@@ -169,9 +175,9 @@
       &:active,
       &:hover {
         color: #000;
+        text-shadow: #fff 1px 1px 1px;
       }
     }
-
   }
   
   .active-link {

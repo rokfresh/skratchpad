@@ -1,3 +1,8 @@
-<p>
-  posts works!
-</p>
+<div *ngFor="let post of postsData; let i = index" class="posts-list-box">
+  <div *ngIf="i<5" class="post-box" >
+    <a (click)="postSelected(post.slug)">
+      <div class="post-box-title" [innerHTML]="post.title">
+      </div>
+    </a>
+  </div>
+</div>

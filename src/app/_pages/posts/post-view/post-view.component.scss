@@ -1,0 +1,15 @@
+@import "../../../../assets/lib/vixins";
+
+:host,
+.post-view-wrap,
+.post-loading {
+    // display
+    display: flex;
+    @include evenXY(100%);
+}
+
+.post-loading {
+    // display 
+    align-items: center;
+    justify-content: center;
+}
