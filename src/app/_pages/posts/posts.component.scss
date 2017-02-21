@@ -1,8 +1,10 @@
 @import "../../../assets/lib/vixins";
 :host {
   @include evenXY(100%);
+  flex-direction: column;
 }
 
+:host,
 .posts-list-box,
 .post-box {
   display: flex;
@@ -16,15 +18,18 @@
 
 .post-box {
   // box
-  height: 7rem;
+  height: 125px;
   width: 100%;
+  overflow: hidden;
   // decor
   border-left: solid #000 .5px;
   border-right: solid #000 .5px;
   border-bottom: solid #000 .6px;
-  .post-box-title {
-    // box 
-    margin-top: auto;
-    padding: 1rem .5rem;
-  }
 }
+.post-box-title {
+    flex: 1;
+  @include evenXY(100%);
+    // box 
+    background: rgba(0, 0, 0, .6);
+    color: #fff;
+  }

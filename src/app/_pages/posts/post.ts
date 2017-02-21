@@ -1,9 +1,11 @@
 export class Post {
    id: number;
    date: Date;
-   title: any;
-   content: any;
+   title: string;
+   content: string;
    slug: string;
-   feat_media: any;
-   media: Object[];
+   feat_media: Object;
+   media: Array<any>;
+   has_featured: Boolean;
+   has_media: Boolean;
 } 

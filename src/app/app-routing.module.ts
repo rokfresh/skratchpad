@@ -3,7 +3,7 @@ import {RouterModule, Routes} from '@angular/router';
 
 import {AboutComponent} from './_pages/about/about.component';
 import {ChaptersComponent} from './_pages/chapters/chapters.component';
-import {FourOhFourComponent} from './_pages/four-oh-four/four-oh-four.component';
+import {PageNotFoundComponent} from './_pages/page-not-found/page-not-found.component';
 import {HomeComponent} from './_pages/home/home.component';
 import {MediaComponent} from './_pages/media/media.component';
 import {PostsComponent} from './_pages/posts/posts.component';
@@ -34,7 +34,7 @@ const appRoutes : Routes = [
     pathMatch: "full"
   }, {
     path: "**",
-    component: FourOhFourComponent
+    component: PageNotFoundComponent
   }
 ];
 

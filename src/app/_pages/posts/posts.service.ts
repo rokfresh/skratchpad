@@ -16,8 +16,6 @@ export class PostsService {
   private post_media_URL : string = "http://skratchpadworldwide.com/wp-json/wp/v2/media";
   private headers : Headers = new Headers({"Content-Type": "application/json"});
 
-  public postsList : Post[];
-
   getPosts() : Observable < any > {
     return this
       .http
@@ -50,10 +48,10 @@ export class PostsService {
       .catch((err : any) => Observable.throw(console.log(err.json()) || "Error"));
   }
 
-  assignPostData(inData, outData): void {
-    inData.forEach((data, i) => {
-      outData[i] = {
-        id: data.id,
+  assignPostData(alpha, beta) : void {
+    alpha.forEach((data, i) => {
+      beta[i] = {
+        id: + data.id,
         date: data.date,
         title: data.title.rendered,
         content: data.content.rendered,
@@ -65,26 +63,50 @@ export class PostsService {
       this
         .getPostMedia(data.id)
         .subscribe((res) => {
-          outData[i].media = res;
+          beta[i].has_media = (res.length !== 0
+            ? true
+            : false);
+          if (beta[i].has_media) {
+            res.forEach((mediaData, j) => {
+              beta[i].media[j] = {
+                media_id: mediaData.id,
+                title: mediaData.title.rendered,
+                type: mediaData.media_type,
+                mime: mediaData.mime_type
+              };
+              beta[i].media[j].size = (mediaData.media_type == "image"
+                ? {
+                  full: mediaData.media_details.sizes.full.source_url,
+                  thumb: mediaData.media_details.sizes.thumbnail.source_url,
+                  blog_thumb: mediaData.media_details.sizes["argent-project-thumbnail"].source_url,
+                  large: (mediaData.media_details.width > 1024 && mediaData.media_details.sizes.large
+                    ? mediaData.media_details.sizes.large.source_url
+                    : null)
+                }
+                : {})
+
+            });
+          }
         });
       // *** get featured media for post *** //
       if (data.featured_media) {
+        beta[i].has_featured = true;
         this
           .getPostFeatMedia(data.featured_media)
           .subscribe((res) => {
             let sizes = res.media_details.sizes
-            outData[i].feat_media.type = res.media_type;
+            beta[i].feat_media.type = res.media_type;
             if (res.media_type == "image") {
-              outData[i].feat_media.full = sizes.full.source_url;
-              outData[i].feat_media.blog = sizes["argent-blog-thumbnail"].source_url;
+              beta[i].feat_media.full_img = sizes.full.source_url;
+              beta[i].feat_media.blog_thumb = sizes["argent-project-thumbnail"].source_url;
+              beta[i].feat_media.large_img = (res.media_details.width > 1024 && sizes.large
+                ? sizes.large.source_url
+                : null)
             } else {
-              outData[i].feat_media = {};
+              beta[i].feat_media.video = res.source_url;
             }
-
           })
       }
     });
-    console.log(outData, "from posts service.");
-    console.log(outData.length);
   }
 }
