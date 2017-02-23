@@ -1,13 +1,16 @@
-<div class="post-view-wrap">
-  <div *ngIf="_loading" class="post-loading">
-    <i class="fa fa-spin fa-spinner fa-3x"></i>
-  </div>
-  <div *ngIf="post"> 
-    <div class="box-heading" [innerHTML]="post.title">
+<div *ngIf="_loading" class="post-loading">
+  <i class="fa fa-spin fa-spinner fa-3x"></i>
+</div>
+<div class="post-view-wrap" *ngIf="post">
+  <div class="post-header">
+    <div class="post-date">
+      {{post.date | date: MMDDYYYY}}
     </div>
-    <div class="content-box" [innerHTML]="post.content"></div>
   </div>
-  
+  <div class="box-heading" [innerHTML]="post.title">
+  </div>
+  <div class="content-box" [innerHTML]="post.content">
+  </div>
   <div *ngIf="!post && !_loading">
     <span class="sorry-msg">
       Sorry, no post was found.

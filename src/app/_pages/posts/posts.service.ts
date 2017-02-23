@@ -97,9 +97,9 @@ export class PostsService {
             let sizes = res.media_details.sizes
             beta[i].feat_media.type = res.media_type;
             if (res.media_type == "image") {
-              beta[i].feat_media.full_img = sizes.full.source_url;
+              beta[i].feat_media.full = sizes.full.source_url;
               beta[i].feat_media.blog_thumb = sizes["argent-project-thumbnail"].source_url;
-              beta[i].feat_media.large_img = (res.media_details.width > 1024 && sizes.large
+              beta[i].feat_media.large = (res.media_details.width > 1024 && sizes.large
                 ? sizes.large.source_url
                 : null)
             } else {
@@ -108,5 +108,6 @@ export class PostsService {
           })
       }
     });
+    console.log(beta);
   }
 }

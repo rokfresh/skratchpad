@@ -44,8 +44,7 @@ export class PostsComponent implements OnInit {
       };
 
     } else if (post.has_media) {
-      console.log(post);
-      console.log(post.media);
+     
       bg_styles = {
         "background-image": "url(\'" + post.media[0].size.blog_thumb + "\')",
         "background-size": "100% auto",

@@ -20,7 +20,7 @@
   align-self: center;
   // box
   height: auto;
-  width: 100%;
+  width: 80%;
   // decor 
   background-color: #444;
   .highlight-box-content {
@@ -45,6 +45,7 @@
   width: 100%;
   // display 
   flex-direction: row wrap;
+  justify-content: center;
 }
 
 .events-list-box {
@@ -55,8 +56,7 @@
 .recent-posts-box {
   // box 
   height: auto;
-  width: 50%;
-  margin-left: auto;
+  width: 60%;
   // display
   flex-direction: column;
   // decor

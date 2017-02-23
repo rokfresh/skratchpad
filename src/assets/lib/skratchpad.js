@@ -32,9 +32,6 @@ function vinyl_drop(a, b) {
 	);
 }
 
-function close_bs_menu(el) {
-	$(el)
-}
 
 $(document).ready(function() {
 

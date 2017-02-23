@@ -1,12 +1,16 @@
 @import "../../../assets/lib/vixins";
 :host {
+  // box
   @include evenXY(100%);
+  margin-top: 1rem;
+  // display
   flex-direction: column;
 }
 
 :host,
 .posts-list-box,
-.post-box {
+.post-box,
+.post-box-title {
   display: flex;
 }
 
@@ -22,14 +26,32 @@
   width: 100%;
   overflow: hidden;
   // decor
-  border-left: solid #000 .5px;
-  border-right: solid #000 .5px;
-  border-bottom: solid #000 .6px;
+  border-left: solid #000 1px;
+  border-right: solid #000 1px;
+  border-bottom: solid #000 1px;
 }
+
 .post-box-title {
-    flex: 1;
-  @include evenXY(100%);
-    // box 
-    background: rgba(0, 0, 0, .6);
-    color: #fff;
+  // display
+  justify-content: center;
+  flex: 1;
+  opacity: 0;
+  // box 
+  padding: .5rem 1rem;
+  // decor
+  background: rgba(0, 0, 0, .6);
+  color: #fff;
+  text-align: center;
+  // font 
+  font-family: $font-gamma;
+  font-size: 2.4rem;
+  // effects
+  transition: opacity 800ms ease-in-out, text-shadow 1.4s, border-left 500ms, border-right 500ms, border-top 800ms, border-bottom 800ms;
+  &:hover,
+  &:active {
+    height: 100%;
+    opacity: 1;
+    cursor: pointer;
+    text-shadow: 1px 1px 10px $color-alpha;
   }
+}
