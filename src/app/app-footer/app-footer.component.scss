@@ -1,18 +1,16 @@
 @import "../../assets/lib/vixins";
-
 :host {
   a {
     color: inherit;
     &:focus,
     &:hover {
-      color: $color-alpha;
+      color: $color-d;
     }
   }
   // display 
   flex-direction: column;
-
   // box
-  border-top: solid .5rem $color-alpha;
+  border-top: solid .5rem $color-d;
   height: auto;
   margin-top: auto;
 }
@@ -38,8 +36,8 @@
   width: 100%;
   padding: 0.3rem 0.5rem;
   // decor
-  background-color: #222;
-  color: #fff;
+  background-color: $color-a;
+  color: $color-b;
   .large-foot-social,
   .large-foot-sponsors {
     display: inline-flex;
@@ -47,6 +45,9 @@
   .large-foot-social {
     // text
     font-size: 2em;
+    .foot-icon {
+      margin: 0 1.4rem;
+    }
   }
   .large-foot-sponsors {
     // box
@@ -54,20 +55,20 @@
     margin-left: auto;
     img {
       height: 4rem;
-      margin: 0 0.6rem;
+      margin: 0 1rem;
     }
   }
 }
 
 .foot-icon {
-  margin: 0 0.8rem;
+  margin: 0 0.6rem;
 }
 
 .mobile-foot-wrap {
   // display
   flex-direction: column;
   // decor
-  background: #333;
+  background: $color-a;
   // box
   height: auto;
   width: 100%;
@@ -77,20 +78,23 @@
     justify-content: center;
     // box
     width: 100%;
+    height: auto;
     // decor
-    color: #fff;
+    color: $color-b;
     // text
-    font-size: 2em;
+    font-size: 2.4em;
+    .foot-icon {
+      margin: 0 2rem;
+    }
   }
   .mobile-foot-sponsors {
     // display
     justify-content: center;
     // box
-    max-height: auto;
     margin: 1rem;
     img {
-      height: 3rem;
-      margin: 0 1rem;
+      height: 4rem;
+      margin: 0 2rem;
     }
   }
 }
@@ -100,13 +104,17 @@
   align-items: center;
   justify-content: center;
   // decor
-  background-color: #000;
-  color: #fff;
+  background-color: $color-a;
+  color: $color-d;
   // text
   font-family: $font-gamma;
   font-size: .8em;
   // box
   height: auto;
+  @include x-padding(1rem);
   padding-bottom: .3rem;
   width: 100%;
+  .foot-motto {
+    margin-left: auto;
+  }
 }

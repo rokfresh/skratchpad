@@ -17,12 +17,12 @@
 .posts-list-box {
   // display 
   flex-direction: column;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .post-box {
   // box
-  height: 125px;
+  height: 250px;
   width: 100%;
   overflow: hidden;
   // decor
@@ -46,7 +46,7 @@
   font-family: $font-gamma;
   font-size: 2.4rem;
   // effects
-  transition: opacity 800ms ease-in-out, text-shadow 1.4s, border-left 500ms, border-right 500ms, border-top 800ms, border-bottom 800ms;
+  transition: opacity 500ms ease-in-out, text-shadow 1.4s, border-left 500ms, border-right 500ms, border-top 800ms, border-bottom 800ms;
   &:hover,
   &:active {
     height: 100%;

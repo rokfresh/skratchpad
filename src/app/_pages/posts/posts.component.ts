@@ -9,7 +9,7 @@ import "rxjs/Rx";
 export class PostsComponent implements OnInit {
   constructor(private postsService : PostsService, private router : Router) {}
   private postsData : Post[] = [];
-
+  private bg_styles : {};
   ngOnInit() {
     // *** get recent posts *** //
     this
@@ -25,7 +25,6 @@ export class PostsComponent implements OnInit {
   }
 
   setPostBg(post) {
-    let bg_styles;
     let sp_path = "./../../assets/img/sp_logos/";
     let sp_logos = [
       sp_path + "sp.logo_3d.cal.bears_01.png",
@@ -36,8 +35,8 @@ export class PostsComponent implements OnInit {
     ];
 
     if (post.has_featured) {
-      bg_styles = {
-        "background-image": "url(\'" + post.feat_media.blog_thumb + "\')",
+      this.bg_styles = {
+        "background-image": "url(\'" + post.feat_media.full + "\')",
         "background-size": "100% auto",
         "background-repeat": "no-repeat",
         "background-position": "center"
@@ -45,21 +44,21 @@ export class PostsComponent implements OnInit {
 
     } else if (post.has_media) {
      
-      bg_styles = {
-        "background-image": "url(\'" + post.media[0].size.blog_thumb + "\')",
+      this.bg_styles = {
+        "background-image": "url(\'" + post.media[0].size.full + "\')",
         "background-size": "100% auto",
         "background-repeat": "no-repeat",
         "background-position": "center"
       }
     } else {
-      bg_styles = {
+      this.bg_styles = {
         "background-image": "url(\'" + sp_logos[Math.floor(Math.random() * sp_logos.length)] + "\')",
-        "background-size": "75%",
+        "background-size": "75% auto",
         "background-repeat": "no-repeat",
         "background-position": "center"
       };
     };
-    return bg_styles;
+    return this.bg_styles;
 
   }
 

@@ -1,5 +1,21 @@
 // ### mixins ###
 
+// ### fonts ###
+$font-alpha: "Exo 2",
+sans-serif;
+$font-beta: "Hammersmith One",
+sans-serif;
+$font-gamma: "Reem Kufi",
+sans-serif;
+// ### color palette ###
+$color-alpha: #D4976A;
+$color-beta: #2D4571;
+$color-gamma: #4E648D;
+$color-a: #2d3142;
+$color-b: #bfc0c0;
+$color-d: #ef8354;
+$color-e: #4f5d75;
+
 // ! screen size
 @mixin screen-size($size) {
 	 @if $size==phone {
@@ -36,11 +52,10 @@
 	width: $val;
 }
 
-// ### fonts ###
-$font-alpha: "Exo 2", sans-serif;
-$font-beta: "Hammersmith One", sans-serif;
-$font-gamma: "Reem Kufi", sans-serif;
-// ### color palette ###
-$color-alpha: #D4976A;
-$color-beta: #2D4571;
-$color-gamma: #4E648D;
+
+.clearfix:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+

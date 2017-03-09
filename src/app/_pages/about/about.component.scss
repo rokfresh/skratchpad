@@ -7,8 +7,14 @@
     // display 
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    
+    justify-content: center;   
 }
 
+.about-img {
+    width: 350px;
+    margin-right: 1rem;
+    @include screen-size(tablet-phone){
+        width: 100%;
+    }
+}
 

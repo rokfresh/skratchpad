@@ -16,6 +16,7 @@ export class PostsService {
   private post_media_URL : string = "http://skratchpadworldwide.com/wp-json/wp/v2/media";
   private headers : Headers = new Headers({"Content-Type": "application/json"});
 
+  // ***** get posts ***** //
   getPosts() : Observable < any > {
     return this
       .http
@@ -24,6 +25,7 @@ export class PostsService {
       .catch((err : any) => Observable.throw(console.log(err.json()) || "Error"));
   }
 
+  // ***** get media assoc with posts ***** //
   getPostMedia(post_id : number) : Observable < any > {
     return this
       .http
@@ -32,6 +34,7 @@ export class PostsService {
       .catch((err : any) => Observable.throw(err.json()) || "Error");
   }
 
+  // ***** get featured media assoc with posts ***** //
   getPostFeatMedia(feat_id : number) : Observable < any > {
     return this
       .http
@@ -40,6 +43,7 @@ export class PostsService {
       .catch((err : any) => Observable.throw(err.json()) || "Error");
   }
 
+// ***** get single post ***** //
   getPost(slug : string) : Observable < Post > {
     return this
       .http
@@ -48,6 +52,7 @@ export class PostsService {
       .catch((err : any) => Observable.throw(console.log(err.json()) || "Error"));
   }
 
+  // ***** assign data to post objet ***** //
   assignPostData(alpha, beta) : void {
     alpha.forEach((data, i) => {
       beta[i] = {

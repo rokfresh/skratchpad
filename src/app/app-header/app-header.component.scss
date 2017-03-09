@@ -3,7 +3,11 @@
     // box
     height: auto;
     width: 100%;
-    margin-bottom: 45px;
+    // decor 
+    border-bottom: $color-d solid .5rem;
+    @include screen-size(tablet-phone) {
+      border-bottom: none;
+    }
     // position
     z-index: 1000;
   }
@@ -11,84 +15,79 @@
   .large-nav-wrap,
   .large-nav-row,
   .large-nav-item,
-  .large-nav-vinyl, 
-  .header-logo {
+  .large-nav-vinyl,
+  .logo-row {
     display: flex;
   }
   
   // ** DESKTOP HEADER / NAVIGATION
   .large-nav-wrap {
-    // dimensions
-    height: 145px;
+    // box
+    height: 90px;
     width: 100%;
-    flex-direction: column;
+    flex-direction: row;
   }
-  
   
   .logo-row {
     // box
-    height: 80%;
+    height: 100%;
+    width: 100%;
+    // display
+    flex-grow: 1;
+    justify-content: center;
     // decor
-    background-image: url("./assets/img/records-237579_1280.jpeg");
+    background-image: url("./assets/img/cut.setup_silho_01.png");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    box-shadow: 0 5px 5px 1px #000, -30px 0 70px 20px #000 inset;
+    box-shadow: -20px 0 40px 10px #000 inset;
   }
   
   .header-logo {
     // box
     height: 100%;
-    width: 100%;
-
+    width: auto;
     // display 
-    justify-content: center;
-    .header-logo-link {
-      width: 231px;
-    }
+    text-align: center;
     .header-logo-img {
       height: 100%;
-      width: auto;
     }
   }
   
   .large-nav-row {
     // box
     height: auto;
-    padding: 0 20px;
-    width: 100%;
+    width: auto;
     // display
     flex-direction: row;
-    justify-content: space-between;
   }
   
   .large-nav-item {
     // decor
-    background-color: #000;
+    background-color: $color-a;
     color: #000;
     // box
-    border-bottom: #aaa solid 0.5px;
-    border-left: #777 solid 1px;
-    border-right: #777 solid 1px;
+    border-left: $color-b solid 1px;
+    border-right: $color-b solid 1px;
     border-radius: 1px;
     height: 100%;
-    width: 12rem;
+    width: 90px;
     // display
     flex-direction: column;
     align-items: center;
     justify-content: center;
     // text
     font-family: $font-beta;
-    font-size: 1.3em;
-    text-align: center;
+    font-size: 1.2em;
     //position
     position: relative;
   }
   
   .large-nav-link {
+    flex-shrink: 1;
     color: #fff;
     &:hover {
-      color: $color-gamma;
+      color: $color-d;
     }
   }
   
@@ -101,12 +100,12 @@
     background-repeat: no-repeat;
     // box
     border-radius: 100%;
-    height: 12rem;
+    height: 100%;
     width: 100%;
     // position
     position: absolute;
     left: 50%;
-    top: -5px;
+    top: 50%;
     z-index: -100;
     // effects
     transform: translate(-50%, -50%);
@@ -124,17 +123,18 @@
   .navbar-header {
     // box 
     height: 60px;
-    box-shadow: 0 1px 10px 2px #000, 0 0 10px 3px #000 inset;
+    box-shadow: -75px 0 40px -5px #000 inset;
     // decor
     background-color: #000;
-    background-image: url("./assets/img/skratchpad_logos/sp_logo_white(drop-shadow_black).png"), url("./assets/img/records-237579_1280.jpeg");
+    background-image: url("./assets/img/skratchpad_logos/sp_logo_wht.org.png"), url("./assets/img/cut.setup_silho_01.png");
     background-position: 55px center, center;
     background-size: contain, cover;
     background-repeat: no-repeat;
+    border-bottom: $color-d solid .5rem;
     .navbar-toggle {
       // decor
       background-color: #fff;
-      color: $color-alpha;
+      color: $color-a;
       // box 
       border-radius: 50%;
       width: 35px;
@@ -145,13 +145,17 @@
     }
   }
   
+  .navbar-fixed-top {
+    border-width: 0;
+  }
+  
   .navbar-collapse {
     border-top: none;
   }
   
   .navbar-collapse,
   .navbar-nav {
-    background: #444;
+    background: $color-a;
   }
   
   .navbar-nav {
@@ -162,25 +166,30 @@
   }
   
   .mobile-nav-item {
+    // decor 
+    border-bottom: $color-e solid 2px;
     // text
     font-family: $font-beta;
     font-size: 2.4rem;
     text-align: center;
     &:hover {
-      background: $color-alpha;
-      color: #fff;
+      background: $color-d;
+      color: $color-e;
     }
     a {
-      color: #fff;
+      color: $color-b;
       &:active,
       &:hover {
-        color: #000;
-        text-shadow: #fff 1px 1px 1px;
+        color: $color-a;
+        text-shadow: $color-b 1px 1px 1px;
       }
     }
   }
   
-  .active-link {
-    // decor
-    color: $color-alpha;
+  .large-nav-item,
+  .navbar-nav {
+    .active-link {
+      // decor
+      color: $color-d;
+    }
   }

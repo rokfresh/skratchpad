@@ -24,15 +24,3 @@
   // display 
   flex-direction: column;
 }
-
-.chapter-loc {
-  // box 
-  width: 45%;
-  margin-left: auto;
-  @include x-padding(1rem);
-}
-
-.chapter-loc {
-  // decor 
-  background: #eee;
-}

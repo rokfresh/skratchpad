@@ -2,14 +2,38 @@
 
 :host,
 .post-view-wrap,
-.post-loading {
+.post-loading,
+.post-header, 
+.post-main-content {
     // display
     display: flex;
-    @include evenXY(100%);
 }
 
+.post-view-wrap,
+.post-main-content, 
 .post-loading {
-    // display 
+    // box
+    @include evenXY(100%);
+    // display
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+.post-header {
+    flex-direction: row;
+    width: 100%;
+
+    .post-date {
+        height: 100px;
+        width: 100px;
+    }
+    .post-title {
+        flex-grow: 1;
+    }
+}
+
+.post-media-box {
+    height: auto;
+    width:  640px;
+}
+
