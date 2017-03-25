@@ -1,61 +1,60 @@
-// ### mixins ###
+ // ### mixins ###
+ // ### fonts ###
+ @font-face {
+   font-family: "Philly Sans";
+   src: url("./assets/font/Philly_Sans/PhillySans.otf");
+ }
 
-// ### fonts ###
-$font-alpha: "Exo 2",
-sans-serif;
-$font-beta: "Hammersmith One",
-sans-serif;
-$font-gamma: "Reem Kufi",
-sans-serif;
-// ### color palette ###
-$color-alpha: #D4976A;
-$color-beta: #2D4571;
-$color-gamma: #4E648D;
-$color-a: #2d3142;
-$color-b: #bfc0c0;
-$color-d: #ef8354;
-$color-e: #4f5d75;
+ $font-a: "Exo 2",
+ sans-serif;
+ $font-b: "Hammersmith One",
+ sans-serif;
+ $font-c: "Reem_Kufi",
+ sans-serif;
+ $font-philly: "Philly Sans",
+ sans-serif;
+ // ### color palette ###
+ $color-a: #2d3142;
+ $color-b: #bfc0c0;
+ $color-d: #ef8354;
+ $color-e: #4f5d75;
+ // ! screen size
+ @mixin screen-size($size) {
+   @if $size==phone {
+     @media (max-width: 479px) {
+       @content;
+     }
+   }
+   @else if $size==tablet-phone {
+     @media (max-width: 665px) {
+       @content;
+     }
+   }
+   @else if $size==desktop {
+     @media (min-width: 1200px) {
+       @content;
+     }
+   }
+ }
 
-// ! screen size
-@mixin screen-size($size) {
-	 @if $size==phone {
-		@media (max-width: 479px) {
-			 @content;
-		}
-	}
-	@else if $size==tablet-phone {
-		 @media (max-width: 665px){
-			@content;
-		}
-	}
+ // ** box mixins **
+ @mixin x-padding($val) {
+   padding-left: $val;
+   padding-right: $val;
+ }
 
-	@else if $size==desktop {
-		 @media (min-width: 1200px){
-			@content;
-		}
-	}
-}
+ @mixin y-padding($val) {
+   padding-top: $val;
+   padding-bottom: $val;
+ }
 
-// ** box mixins **
-@mixin x-padding($val) {
-	padding-left: $val;
-	padding-right: $val;
-}
+ @mixin evenXY($val) {
+   height: $val;
+   width: $val;
+ }
 
-@mixin y-padding($val) {
-	padding-top: $val;
-	padding-bottom: $val;
-}
-
-@mixin evenXY($val) {
-	height: $val;
-	width: $val;
-}
-
-
-.clearfix:after {
-	content: '';
-	display: table;
-	clear: both;
-}
-
+ .clearfix:after {
+   content: '';
+   display: table;
+   clear: both;
+ }

@@ -8,7 +8,7 @@ body {
 
 body {
   // text
-  font-family: $font-alpha;
+  font-family: $font-a;
   font-size: 16px;
   @include screen-size(phone) {
     font-size: 14px;
@@ -74,7 +74,7 @@ a:hover {
     justify-content: center;
   }
   // text
-  font-family: $font-gamma;
+  font-family: $font-philly;
   font-size: 2em;
 }
 

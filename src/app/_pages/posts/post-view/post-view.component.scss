@@ -1,39 +1,125 @@
 @import "../../../../assets/lib/vixins";
+:host,
+.post-loading {
+  @include evenXY(100%);
+}
 
 :host,
-.post-view-wrap,
 .post-loading,
-.post-header, 
-.post-main-content {
-    // display
-    display: flex;
+.post-wrap,
+.post-header,
+.post-date,
+.post-day,
+.post-month,
+.post-year,
+.post-title,
+.post-main,
+.post-media,
+.post-carousel {
+  // flex
+  display: flex;
+  align-items: center;
 }
 
-.post-view-wrap,
-.post-main-content, 
-.post-loading {
-    // box
-    @include evenXY(100%);
-    // display
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.post-loading,
+.post-month,
+.post-year,
+.post-title {
+  // display
+  flex-grow: 1;
 }
+
+.post-loading,
+.post-month,
+.post-day,
+.post-year,
+.post-title,
+.post-media,
+.post-main {
+  justify-content: center;
+}
+
+.post-wrap,
+.post-header,
+.post-day,
+.post-carousel,
+.slick-dots {
+  // box
+  width: 100%;
+}
+
+.post-wrap,
+.post-date,
+.post-media,
+.post-main {
+  // flex
+  flex-direction: column;
+}
+
 .post-header {
-    flex-direction: row;
-    width: 100%;
-
-    .post-date {
-        height: 100px;
-        width: 100px;
-    }
-    .post-title {
-        flex-grow: 1;
-    }
+  // box
+  height: auto;
+  margin-bottom: 2rem;
 }
 
-.post-media-box {
-    height: auto;
-    width:  640px;
+.post-date {
+  // box
+  height: 100px;
+  width: 100px;
+  // decor
+  background: $color-a;
+  color: #fff;
+  font-size: 1.2em;
+  font-family: $font-b;
+  .post-day {
+    // box 
+    @include evenXY(30%);
+    // decor
+    background: #fff;
+    color: $color-e;
+    font-size: 1.2em;
+    font-weight: 800;
+    border-radius: 100%;
+  }
 }
 
+.post-title {
+  // box 
+  border-bottom: 2px solid #000;
+  height: 100%;
+  padding: 1rem;
+  // decor 
+  background: $color-b;
+  color: $color-a;
+  font-family: $font-b;
+  font-size: 2em;
+  font-weight: 700;
+  text-shadow: 1px 2px 1px $color-d;
+}
+
+.post-media {
+  // box 
+  width: 600px;
+}
+
+.post-carousel {
+  flex-direction: row;
+}
+
+.post-content {
+  border-left: solid 2px #000;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  position: relative;
+  width: 85%;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1px;
+    text-align: center;
+    width: 5%;
+    border-top: 2px solid #000;
+  }
+}

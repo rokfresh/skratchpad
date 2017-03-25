@@ -43,7 +43,7 @@
   color: #fff;
   text-align: center;
   // font 
-  font-family: $font-gamma;
+  font-family: $font-philly;
   font-size: 2.4rem;
   // effects
   transition: opacity 500ms ease-in-out, text-shadow 1.4s, border-left 500ms, border-right 500ms, border-top 800ms, border-bottom 800ms;
@@ -52,6 +52,6 @@
     height: 100%;
     opacity: 1;
     cursor: pointer;
-    text-shadow: 1px 1px 10px $color-alpha;
+    text-shadow: 1px 1px 10px $color-a;
   }
 }
