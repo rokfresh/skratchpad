@@ -18,14 +18,11 @@
       "prefix": "",
       "mobile": false,
       "styles": [
-        "./assets/lib/normalize.css/normalize.css",
-        "./assets/lib/bootstrap/dist/css/bootstrap.min.css", 
-        "./assets/lib/font-awesome/scss/font-awesome.scss", 
+        "../node_modules/normalize.css/normalize.css",
+        "../node_modules/font-awesome/scss/font-awesome.scss", 
         "styles.scss"
       ],
       "scripts": [
-        "./assets/lib/jquery/dist/jquery.slim.js",
-        "./assets/lib/bootstrap/js/collapse.js",
         "./assets/lib/skratchpad.js"
       ],
       "environments": {

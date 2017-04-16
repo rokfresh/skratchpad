@@ -4,6 +4,7 @@ import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
 import {AppRoutingModule} from './app-routing.module';
+import {NgbModule} from '@ng-boootstrap/ng-bootstrap';
 // ### component imports ###
 import {AppComponent} from './app.component';
 import {AppBodyComponent} from './app-body/app-body.component';
@@ -34,7 +35,7 @@ import {PostsService} from './_pages/posts/posts.service';
     PageNotFoundComponent
   ],
   imports: [
-    BrowserModule, FormsModule, HttpModule, AppRoutingModule
+    BrowserModule, FormsModule, HttpModule, AppRoutingModule, NgbModule.fotRoot();
   ],
   providers: [PostsService],
   bootstrap: [AppComponent]

@@ -3,24 +3,56 @@
 // display: flex
 :host,
 .chapter-box,
-.chapter-crew {
+.chapter-heading,
+.chapter-info,
+.chapter-crew,
+.chapter-loc {
   display: flex;
 }
 
 :host {
   // display
-  flex-direction: column;
-  // text
+  flex-direction: column; // text
   font-family: $font-a;
 }
 
 .chapter-box {
-  // box 
-  height: auto;
-  width: 50%;
-  @include screen-size(phone) {    
-    width: auto;
-  }
-  // display 
   flex-direction: column;
+  .chapter-heading {
+    // box
+    width: 100%;
+    // display 
+    align-items: center;
+    justify-content: center;
+    // decor 
+    background: $color-a;
+    color: #fff;
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: $color-b 1px 1px 1px;
+  }
+  .chapter-info {
+    // box 
+    height: auto;
+    width: 100%;
+    @include screen-size(tablet-phone) {
+      // box
+      width: auto;
+      // flex 
+      flex-direction: column;
+    }
+    .chapter-loc, 
+    .chapter-crew {
+      flex-direction: column;
+    }
+    .chapter-loc {
+      // box
+      height: 200px;
+      width: 300px; 
+    }
+    .chapter-crew {
+      // box 
+      width: 40%;
+    }
+  }
 }

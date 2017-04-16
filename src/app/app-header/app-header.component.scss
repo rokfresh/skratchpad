@@ -16,7 +16,8 @@
   .large-nav-row,
   .large-nav-item,
   .large-nav-vinyl,
-  .logo-row {
+  .logo-row,
+  .navbar-header {
     display: flex;
   }
   
@@ -77,7 +78,7 @@
     align-items: center;
     justify-content: center;
     // text
-    font-family: $font-b;
+    font-family: $font-philly;
     font-size: 1.2em;
     //position
     position: relative;
@@ -119,11 +120,14 @@
     width: 100%;
     border: none;
   }
-  
+  .navbar {
+    padding: 0;
+  }
+
   .navbar-header {
     // box 
-    height: 60px;
-    box-shadow: -75px 0 40px -5px #000 inset;
+    height: 70px;
+    box-shadow: -75px 0 40px -5px $color-a inset;
     // decor
     background-color: #000;
     background-image: url("./assets/img/skratchpad_logos/sp_logo_wht.org.png"), url("./assets/img/cut.setup_silho_01.png");
@@ -131,17 +135,17 @@
     background-size: contain, cover;
     background-repeat: no-repeat;
     border-bottom: $color-d solid .5rem;
-    .navbar-toggle {
+    .navbar-toggler {
       // decor
-      background-color: #fff;
+      background-color: $color-b;
       color: $color-a;
       // box 
       border-radius: 50%;
-      width: 35px;
+      width: auto;
       padding: 3px;
-    }
-    .navbar-btn-img {
-      @include evenXY(100%);
+      // display
+      align-self: center;
+
     }
   }
   
@@ -169,7 +173,7 @@
     // decor 
     border-bottom: $color-e solid 2px;
     // text
-    font-family: $font-b;
+    font-family: $font-philly;
     font-size: 2.4rem;
     text-align: center;
     &:hover {

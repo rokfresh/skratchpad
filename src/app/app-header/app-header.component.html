@@ -1,6 +1,6 @@
 <!--###################################-->
 <!-- site header/nav for larger (>=768px) devices-->
-<header class="large-nav-wrap hidden-xs">
+<header class="large-nav-wrap hidden-sm-down">
   <div class="logo-row">
     <div class="header-logo">
       <a class="header-logo-link" routerLink="/home">
@@ -37,31 +37,31 @@
 </header>
 <!--###################################-->
 <!-- navbar for small (<=767px) devices -->
-<div class="mobile-nav-wrap visible-xs">
-  <nav class="navbar navbar-default navbar-fixed-top">
+<div class="mobile-nav-wrap hidden-md-up">
+  <nav class="navbar navbar-fixed-top navbar-toggleable-md">
     <div classs="container-fluid">
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mobileNav" aria-expanded="false">
+        <button type="button" class="navbar-toggler navbar-toggler-right" data-toggle="collapse" data-target="#mobileNav" aria-expanded="false" aria-controls="mobileNav">
           <span class="sr-only">toggle navigation</span>
-          <img src="./assets/img/vinyl_1.svg" alt="vinyl menu toggle" class="navbar-btn-img">
+          <img src="./assets/img/vinyl_1.svg" alt="vinyl menu toggle" class="navbar-btn-img navbar-toggler-icon">
         </button>
       </div>
       <div class="collapse navbar-collapse" id="mobileNav">
-        <ul class="nav navbar-nav">
+        <ul class="navbar-nav mr-auto">
           <li class="mobile-nav-item">
-            <a href="#" routerLink="/home" routerLinkActive="active-link">Home</a>
+            <a href="#" class="nav-link" routerLink="/home" routerLinkActive="active-link">Home</a>
           </li>
-          <li class="mobile-nav-item">
-            <a href="#" routerLink="/media" routerLinkActive="active-link">Media</a>
+          <li class="mobile-nav-item nav-item">
+            <a href="#" class="nav-link" routerLink="/media" routerLinkActive="active-link">Media</a>
           </li>
-          <li class="mobile-nav-item">
-            <a href="#" routerLink="/chapters" routerLinkActive="active-link">Chapters</a>
+          <li class="mobile-nav-item nav-item">
+            <a href="#" class="nav-link" routerLink="/chapters" routerLinkActive="active-link">Chapters</a>
           </li>
-          <li class="mobile-nav-item">
-            <a href="#" routerLink="/shop" routerLinkActive="active-link">Shop</a>
+          <li class="mobile-nav-item nav-item">
+            <a href="#" class="nav-link" routerLink="/shop" routerLinkActive="active-link">Shop</a>
           </li>
-          <li class="mobile-nav-item">
-            <a href="#" routerLink="/about" routerLinkActive="active-link">About</a>
+          <li class="mobile-nav-item nav-item">
+            <a href="#" class="nav-link" routerLink="/about" routerLinkActive="active-link">About</a>
           </li>
         </ul>
       </div>
