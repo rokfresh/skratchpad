@@ -43,7 +43,7 @@ export class PostsService {
       .catch((err : any) => Observable.throw(err.json()) || "Error");
   }
 
-// ***** get single post ***** //
+  // ***** get single post ***** //
   getPost(slug : string) : Observable < Post > {
     return this
       .http
@@ -73,14 +73,14 @@ export class PostsService {
             : false);
           if (beta[i].has_media) {
             res.forEach((mediaData, j) => {
-              beta[i].media[j] = {
-                media_id: mediaData.id,
-                title: mediaData.title.rendered,
-                type: mediaData.media_type,
-                mime: mediaData.mime_type
-              };
-              beta[i].media[j].size = (mediaData.media_type == "image"
-                ? {
+              if (mediaData.media_type == "image") {
+                beta[i].media[j] = {
+                  media_id: mediaData.id,
+                  title: mediaData.title.rendered,
+                  type: mediaData.media_type,
+                  mime: mediaData.mime_type
+                };
+                beta[i].media[j].size = {
                   full: mediaData.media_details.sizes.full.source_url,
                   thumb: mediaData.media_details.sizes.thumbnail.source_url,
                   blog_thumb: mediaData.media_details.sizes["argent-project-thumbnail"].source_url,
@@ -88,8 +88,7 @@ export class PostsService {
                     ? mediaData.media_details.sizes.large.source_url
                     : null)
                 }
-                : {})
-
+              }
             });
           }
         });
@@ -107,9 +106,7 @@ export class PostsService {
               beta[i].feat_media.large = (res.media_details.width > 1024 && sizes.large
                 ? sizes.large.source_url
                 : null)
-            } else {
-              beta[i].feat_media.video = res.source_url;
-            }
+            };
           })
       }
     });

@@ -12,12 +12,21 @@
       </div>
       <div class="post-year">
         {{post.date | date: "yyyy"}}
-      </div>      
+      </div>
     </div>
     <div class="box-heading post-title" [innerHTML]="post.title"></div>
   </div>
   <div class="post-media-box">
-    <img [src]="post.feat_media.full" class="img-responsive" />
+    <ngb-carousel class="post-carousel">
+
+      <template ngbSlide *ngFor="let media of post.media">
+        <img class="img-responsive" [src]="media.size.full" alt="media.title">
+        <div class="carousel-caption">
+          <p class="post-carousel-cap" [innerHTML]="media.title">
+          </p>
+        </div>
+      </template>
+    </ngb-carousel>
   </div>
   <div class="content-box" [innerHTML]="post.content"></div>
   <div *ngIf="!post && !_loading">

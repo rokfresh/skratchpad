@@ -3,12 +3,13 @@ import {Router, ActivatedRoute, Params} from '@angular/router';
 import {Post} from '../post';
 import {PostsService} from '../posts.service';
 import {PostsComponent} from '../posts.component'
+import {NgbCarouselConfig} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'post-view',
   templateUrl: './post-view.component.html',
   styleUrls: ['./post-view.component.scss'],
-  providers: [PostsService]
+  providers: [PostsService, NgbCarouselConfig]
 })
 
 export class PostViewComponent implements OnInit {
@@ -17,7 +18,9 @@ export class PostViewComponent implements OnInit {
   private post : Post;
   _loading : Boolean = true;
 
-  constructor(private postsService : PostsService, private route : ActivatedRoute) {}
+  constructor(private postsService : PostsService, private carousel : NgbCarouselConfig, private route : ActivatedRoute) {
+    carousel.interval = 0;
+  }
 
   grabPost(slug : string) : void {
     this

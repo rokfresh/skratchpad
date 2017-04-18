@@ -14,7 +14,7 @@
 .post-year,
 .post-title,
 .post-main,
-.post-media,
+.post-media-box,
 .post-carousel {
   // flex
   display: flex;
@@ -34,7 +34,7 @@
 .post-day,
 .post-year,
 .post-title,
-.post-media,
+.post-media-box,
 .post-main {
   justify-content: center;
 }
@@ -43,6 +43,7 @@
 .post-header,
 .post-day,
 .post-carousel,
+.post-media-box,
 .slick-dots {
   // box
   width: 100%;
@@ -50,7 +51,7 @@
 
 .post-wrap,
 .post-date,
-.post-media,
+.post-media-box,
 .post-main {
   // flex
   flex-direction: column;
@@ -65,16 +66,14 @@
 .post-date {
   // box
   height: 100px;
-  width: 100px;
-  // decor
+  width: 100px; // decor
   background: $color-a;
   color: #fff;
   font-size: 1.2em;
   font-family: $font-b;
   .post-day {
     // box 
-    @include evenXY(30%);
-    // decor
+    @include evenXY(30%); // decor
     background: #fff;
     color: $color-e;
     font-size: 1.2em;
@@ -87,8 +86,7 @@
   // box 
   border-bottom: 2px solid #000;
   height: 100%;
-  padding: 1rem;
-  // decor 
+  padding: 1rem; // decor 
   background: $color-b;
   color: $color-a;
   font-family: $font-b;
@@ -97,21 +95,20 @@
   text-shadow: 1px 2px 1px $color-d;
 }
 
-.post-media {
-  // box 
-  width: 600px;
-}
-
 .post-carousel {
-  flex-direction: row;
+  // box
+  width: 600px;
+  // display
+  align-self: center;
 }
-
 .post-content {
+  // box
   border-left: solid 2px #000;
   padding: 1rem;
   margin: 1.5rem 0;
-  position: relative;
   width: 85%;
+  // position
+  position: relative;
   &:before {
     content: "";
     position: absolute;
