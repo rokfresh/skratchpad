@@ -2,19 +2,25 @@ import {Injectable} from '@angular/core';
 import {Http, Headers, Response, RequestOptions} from '@angular/http';
 import {Post} from './post'
 import {Observable} from 'rxjs/Observable';
-
+import {Router} from '@angular/router';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
 @Injectable()
 export class PostsService {
 
-  constructor(private http : Http) {}
+  constructor(private http : Http, private router : Router) {}
 
   private wp_URL : string = "http://skratchpadworldwide.com/wp-json/wp/v2";
   private posts_URL : string = "http://skratchpadworldwide.com/wp-json/wp/v2/posts";
   private post_media_URL : string = "http://skratchpadworldwide.com/wp-json/wp/v2/media";
   private headers : Headers = new Headers({"Content-Type": "application/json"});
+
+  postSelected(slug : string) {
+    this
+      .router
+      .navigate(['/posts', slug]);
+  }
 
   // ***** get posts ***** //
   getPosts() : Observable < any > {
@@ -112,4 +118,6 @@ export class PostsService {
     });
     console.log(beta);
   }
+
+  
 }

@@ -1,4 +1,6 @@
   @import "./../../assets/lib/vixins";
+   $large-nav-height: 100px;
+   
    :host {
     // box
     height: auto;
@@ -24,7 +26,7 @@
   // ** DESKTOP HEADER / NAVIGATION
   .large-nav-wrap {
     // box
-    height: 90px;
+    height: $large-nav-height;
     width: 100%;
     flex-direction: row;
   }
@@ -72,14 +74,14 @@
     border-right: $color-b solid 1px;
     border-radius: 1px;
     height: 100%;
-    width: 90px;
+    width: $large-nav-height;
     // display
     flex-direction: column;
     align-items: center;
     justify-content: center;
     // text
     font-family: $font-philly;
-    font-size: 1.2em;
+    font-size: 1.4em;
     //position
     position: relative;
   }

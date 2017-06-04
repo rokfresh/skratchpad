@@ -14,21 +14,21 @@
         {{post.date | date: "yyyy"}}
       </div>
     </div>
-    <div class="box-heading post-title" [innerHTML]="post.title"></div>
+    <div class="post-title" [innerHTML]="post.title"></div>
+  </div>
+  <div class="post-content" [innerHTML]="post.content">
   </div>
   <div class="post-media-box">
     <ngb-carousel class="post-carousel">
-
       <template ngbSlide *ngFor="let media of post.media">
-        <img class="img-responsive" [src]="media.size.full" alt="media.title">
+        <img class="img-fluid" [src]="media.size.full" alt="media.title">
         <div class="carousel-caption">
-          <p class="post-carousel-cap" [innerHTML]="media.title">
-          </p>
+          <span class="slide-caption" [innerHTML]="media.title"></span>
+          <span class="slide-credit" *ngIf="media.credit" [innerHTML]="media.credit"></span>
         </div>
       </template>
     </ngb-carousel>
   </div>
-  <div class="content-box" [innerHTML]="post.content"></div>
   <div *ngIf="!post && !_loading">
     <span class="sorry-msg">
       Sorry, no post was found.

@@ -57,8 +57,12 @@
   // box 
   height: auto;
   width: auto;
+  margin-right: auto;
   // display
   flex-direction: column;
   // decor
   background: #eee;
+  // font
+  font-size: 1.2rem;
+  color: $color-a;
 }

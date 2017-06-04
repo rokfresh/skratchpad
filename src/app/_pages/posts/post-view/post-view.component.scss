@@ -1,4 +1,5 @@
 @import "../../../../assets/lib/vixins";
+
 :host,
 .post-loading {
   @include evenXY(100%);
@@ -6,7 +7,23 @@
 
 :host,
 .post-loading,
-.post-wrap,
+.post-view-wrap,
+.post-header,
+.post-date,
+.post-day,
+.post-month,
+.post-year,
+.post-title,
+.post-main,
+.post-content,
+.post-media-box,
+.post-carousel {
+  // flex
+  display: flex;
+}
+
+.post-loading,
+.post-view-wrap,
 .post-header,
 .post-date,
 .post-day,
@@ -17,7 +34,6 @@
 .post-media-box,
 .post-carousel {
   // flex
-  display: flex;
   align-items: center;
 }
 
@@ -39,18 +55,18 @@
   justify-content: center;
 }
 
-.post-wrap,
+.post-view-wrap,
 .post-header,
 .post-day,
 .post-carousel,
-.post-media-box,
-.slick-dots {
+.post-media-box {
   // box
   width: 100%;
 }
 
-.post-wrap,
+.post-view-wrap,
 .post-date,
+.post-content,
 .post-media-box,
 .post-main {
   // flex
@@ -66,47 +82,58 @@
 .post-date {
   // box
   height: 100px;
-  width: 100px; // decor
+  width: 100px; 
+  // decor
   background: $color-a;
   color: #fff;
   font-size: 1.2em;
   font-family: $font-b;
   .post-day {
     // box 
-    @include evenXY(30%); // decor
+    width: 100%;
+    // decor
     background: #fff;
     color: $color-e;
     font-size: 1.2em;
     font-weight: 800;
-    border-radius: 100%;
+    // border-radius: 100%;
   }
 }
 
 .post-title {
   // box 
-  border-bottom: 2px solid #000;
   height: 100%;
-  padding: 1rem; // decor 
-  background: $color-b;
+  border-bottom: 2px solid #000;
+  padding: 1rem; 
+  // display 
+  flex-grow: 1; 
+  // decor 
+  background: $color-b; 
+  // font
   color: $color-a;
   font-family: $font-b;
   font-size: 2em;
-  font-weight: 700;
+  font-weight: 700; 
+  // effects
   text-shadow: 1px 2px 1px $color-d;
 }
 
 .post-carousel {
-  // box
-  width: 600px;
+  @include screen-size(tablet-phone) {
+    width: 90%;
+  } 
   // display
   align-self: center;
 }
+
+
 .post-content {
   // box
-  border-left: solid 2px #000;
+  border-left: solid 2px $color-a;
+  border-bottom: solid 2px $color-a;
   padding: 1rem;
-  margin: 1.5rem 0;
-  width: 85%;
+  margin: 1.5rem auto;
+  width: 90%; 
   // position
   position: relative;
   &:before {
@@ -116,7 +143,19 @@
     left: 0;
     height: 1px;
     text-align: center;
-    width: 5%;
-    border-top: 2px solid #000;
+    width: 10%;
+    border-top: 2px solid $color-a;
+  }
+}
+
+.post-media-box {
+  // box
+  width: 70%;
+  padding: 2em;
+  // decor
+  background-color: $color-a;
+  @include screen-size(tablet-phone) {
+    width: 100%;
+    padding: .5em;
   }
 }

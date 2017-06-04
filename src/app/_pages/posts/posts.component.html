@@ -1,7 +1,7 @@
 <div *ngFor="let post of postsData; let i = index" class="posts-list-box">
   <div class="post-box" [ngStyle]="setPostBg(post)">
     
-      <div class="post-box-title" [innerHTML]="post.title" (click)="postSelected(post.slug)">
+      <div class="post-box-title" [innerHTML]="post.title" (click)="postsService.postSelected(post.slug)">
       </div>
     
   </div>

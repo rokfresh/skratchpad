@@ -4,8 +4,18 @@
 <div class="main-content">
   <div class="content-box recent-posts-box">
     <div class="box-heading">
-      Recent Posts
+      Recents posts
     </div>
-    <posts></posts>
+    <div class="recent-post" *ngFor="let post of postsData; let i = index;">
+      <div class="post-date">
+        [{{postsData[i].date | date: MMMddyyyy}}]
+      </div>
+      <div class="post-title">
+        <a (click)="postsService.postSelected(post.slug)">
+          <span [innerHTML]="post.title"></span>
+        </a>
+      </div>
+    </div>
   </div>
 </div>
+

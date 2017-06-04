@@ -16,7 +16,7 @@ export class PostViewComponent implements OnInit {
 
   private postsData : Post[] = [];
   private post : Post;
-  _loading : Boolean = true;
+  private _loading : Boolean = true;
 
   constructor(private postsService : PostsService, private carousel : NgbCarouselConfig, private route : ActivatedRoute) {
     carousel.interval = 0;

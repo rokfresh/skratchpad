@@ -1,13 +1,19 @@
 import {Component, OnInit, Inject} from '@angular/core';
 import {PostsService} from './posts.service'
 import {Post} from './post';
-import {Router} from '@angular/router';
+
 import "rxjs/Rx";
 
-@Component({selector: 'posts', templateUrl: './posts.component.html', styleUrls: ['./posts.component.scss'], providers: [PostsService]})
+@Component({
+  selector: 'posts',
+  templateUrl: './posts.component.html',
+  styleUrls: ['./posts.component.scss'],
+  providers: [PostsService]
+})
+
 
 export class PostsComponent implements OnInit {
-  constructor(private postsService : PostsService, private router : Router) {}
+  constructor(private postsService : PostsService) {}
   private postsData : Post[] = [];
   private bg_styles : {};
   ngOnInit() {
@@ -62,10 +68,5 @@ export class PostsComponent implements OnInit {
 
   }
 
-  postSelected(slug : string) {
-    this
-      .router
-      .navigate(['/posts', slug]);
-  }
 
 }

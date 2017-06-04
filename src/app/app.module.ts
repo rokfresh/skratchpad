@@ -17,6 +17,7 @@ import {PostsComponent} from './_pages/posts/posts.component';
 import {AboutComponent} from './_pages/about/about.component';
 import {PostViewComponent} from './_pages/posts/post-view/post-view.component';
 import {PageNotFoundComponent} from './_pages/page-not-found/page-not-found.component';
+
 // ### sevice imports ###
 import {PostsService} from './_pages/posts/posts.service';
 
@@ -40,6 +41,5 @@ import {PostsService} from './_pages/posts/posts.service';
   providers: [PostsService],
   bootstrap: [AppComponent]
 })
-
 
 export class AppModule {}

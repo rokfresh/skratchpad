@@ -1,5 +1,4 @@
 @import "./assets/lib/vixins";
-
 html,
 body {
   // box
@@ -7,6 +6,8 @@ body {
 }
 
 body {
+  // decor
+  color: #fff;
   // text
   font-family: $font-a;
   font-size: 16px;
@@ -50,29 +51,30 @@ a:hover {
   height: auto;
   width: auto;
   margin: 1rem;
-  padding: 1rem;
+  padding: 1rem; 
   // decor 
   background: #eee;
-  box-shadow: 0 0 1rem -0.3rem #777;
+  box-shadow: 0 0 1rem -0.3rem $color-a; 
+  border-radius: 5px;
   // display 
   flex-direction: column;
+  justify-content: center;
 }
 
 .box-heading {
   // box
-  height: 6.5rem;
   width: 100%;
   border-bottom: $color-a solid 2px;
-  @include x-padding(1.5rem);
+  @include x-padding(1.5rem); 
   // decor 
   background: $color-b;
-  color: $color-a;
+  color: $color-a; 
   // display
   align-items: center;
   align-self: center;
   @include screen-size(phone) {
     justify-content: center;
-  }
+  } 
   // text
   font-family: $font-philly;
   font-size: 2em;
@@ -83,4 +85,17 @@ a:hover {
   background-image: url("./assets/img/sp_logos/sp.bg_multi.logos_greys.png");
   background-size: 75%;
   background-repeat: repeat-x;
+}
+
+// overwrite [Post] NgbCarousel rules
+.post-carousel {
+  .carousel-indicators {
+    .active {
+      background-color: $color-d;
+    }
+    li {
+      background-color: rgba(200, 200, 200, 0.5);
+    }
+  }
+
 }
