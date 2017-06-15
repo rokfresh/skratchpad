@@ -1,0 +1,88 @@
+{
+  "chapters": {
+    "sf": {
+      "celskiii": {
+        "name": "Celskiii",
+        "since": "2003",
+        "started": "",
+        "first_setup": "",
+        "bio": "",
+        "photos": [],
+        "social": {
+          "email": "celskiii@skratchpadworldwide.com",
+          "fb": "",
+          "ig": ""
+        }
+      },
+      "dee": {
+        "name": "DeeAndroid",
+        "since": "2003",
+        "started": "",
+        "first_setup": "",
+        "bio": "",
+        "photos": [],
+        "social": {
+          "email": "deeandroid@skratchpadworldwide.com",
+          "fb": "",
+          "ig": ""
+        }
+      },
+      "mista_b": {
+        "name": "DJ Mista B",
+        "since": "2003",
+        "started": "",
+        "first_setup": "",
+        "bio": "",
+        "photos": [],
+        "social": {
+          "email": "",
+          "fb": "",
+          "ig": "",
+          "web": ""
+        }
+      },
+      "pone": {
+        "name": "DJ Pone",
+        "since": "2003",
+        "started": "1989",
+        "first_setup": "",
+        "bio": "",
+        "photos": [],
+        "social": {
+          "email": "",
+          "fb": "",
+          "ig": "",
+          "web": ""
+        }
+      },
+      "robynn": {
+        "name": "DJ Robynn",
+        "since": "",
+        "started": "",
+        "first_setup": "",
+        "bio": "",
+        "photos": [],
+        "social": {
+          "email": "",
+          "fb": ""
+        }
+      },
+      "traps": {
+        "name": "DJ Traps",
+        "since": "",
+        "started": "",
+        "first_setup": "",
+        "bio": "",
+        "photos": [],
+        "social": {
+          "email": "",
+          "fb": "",
+          "ig": "",
+          "web": ""
+        }
+      }
+
+    }
+
+  }
+}
