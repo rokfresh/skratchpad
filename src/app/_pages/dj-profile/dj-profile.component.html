@@ -1,3 +1,22 @@
-<p>
-  dj-profile works!
-</p>
+<div class="profile-close">
+  <span (click)="activeModal.close()">close <i class="fa fa-times-circle" aria-label="close"></i></span>
+</div>
+<div class="profile-pic">
+  <img [src]="photo" [alt]="name" class="img-fluid">
+</div>
+<div class="profile-name">
+  <span class="dj-name">{{name}}</span>
+</div>
+<div class="profile-info">
+  <ul class="dj-social">
+
+  </ul>
+  <ul class="dj-info">
+    <li><span class="crew-span" *ngFor="let i of crew">{{i}} </span></li>
+    <li>{{since}}</li>
+    <li>{{started}}</li>
+  </ul>
+</div>
+<div class="profile-bio">
+  {{bio}}
+</div>

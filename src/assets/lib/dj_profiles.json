@@ -1,88 +1,140 @@
 {
-  "chapters": {
-    "sf": {
-      "celskiii": {
-        "name": "Celskiii",
-        "since": "2003",
-        "started": "",
-        "first_setup": "",
-        "bio": "",
-        "photos": [],
-        "social": {
-          "email": "celskiii@skratchpadworldwide.com",
-          "fb": "",
-          "ig": ""
-        }
-      },
-      "dee": {
-        "name": "DeeAndroid",
-        "since": "2003",
-        "started": "",
-        "first_setup": "",
-        "bio": "",
-        "photos": [],
-        "social": {
-          "email": "deeandroid@skratchpadworldwide.com",
-          "fb": "",
-          "ig": ""
-        }
-      },
-      "mista_b": {
-        "name": "DJ Mista B",
-        "since": "2003",
-        "started": "",
-        "first_setup": "",
-        "bio": "",
-        "photos": [],
-        "social": {
-          "email": "",
-          "fb": "",
-          "ig": "",
-          "web": ""
-        }
-      },
-      "pone": {
-        "name": "DJ Pone",
-        "since": "2003",
-        "started": "1989",
-        "first_setup": "",
-        "bio": "",
-        "photos": [],
-        "social": {
-          "email": "",
-          "fb": "",
-          "ig": "",
-          "web": ""
-        }
-      },
-      "robynn": {
-        "name": "DJ Robynn",
-        "since": "",
-        "started": "",
-        "first_setup": "",
-        "bio": "",
-        "photos": [],
-        "social": {
-          "email": "",
-          "fb": ""
-        }
-      },
-      "traps": {
-        "name": "DJ Traps",
-        "since": "",
-        "started": "",
-        "first_setup": "",
-        "bio": "",
-        "photos": [],
-        "social": {
-          "email": "",
-          "fb": "",
-          "ig": "",
-          "web": ""
-        }
+  "sf": {
+    "celskiii": {
+      "name": "Celskiii",
+      "crew": ["La Femme Deadly Venom", "Analog Girlz"], 
+      "since": "2003",
+      "started": "",
+      "bio": "Ut ornare, ipsum sit amet interdum viverra, nisl sapien gravida sapien, porta pretium quam sem vel lectus. Maecenas laoreet, lectus vitae semper varius, libero lorem pharetra dui, in tincidunt sem risus eu nisi? Vestibulum commodo purus eu risus iaculis quis vulputate metus rhoncus. Duis placerat neque sed diam gravida eget tempor odio ornare! In in tortor nec metus feugiat molestie fermentum vulputate libero? Aliquam sed sapien nisl? Nunc a lacus at risus semper sagittis. Duis placerat neque sed diam gravida eget tempor odio ornare! In in tortor nec metus feugiat molestie fermentum vulputate libero? Aliquam sed sapien nisl? Nunc a lacus at risus semper sagittis.",
+      "photo": "../../assets/img/_profile/sf/celskiii.jpg",
+      "social": {
+        "email": "celskiii@skratchpadworldwide.com",
+        "fb": "",
+        "ig": ""
       }
-
+    },
+    "dee": {
+      "name": "DeeAndroid",
+      "crew":["La Femme Deadly Venom"],
+      "since": "2003",
+      "started": "",
+      "bio": "Ut ornare, ipsum sit amet interdum viverra, nisl sapien gravida sapien, porta pretium quam sem vel lectus. Maecenas laoreet, lectus vitae semper varius, libero lorem pharetra dui, in tincidunt sem risus eu nisi? Vestibulum commodo purus eu risus iaculis quis vulputate metus rhoncus. Duis placerat neque sed diam gravida eget tempor odio ornare! In in tortor nec metus feugiat molestie fermentum vulputate libero? Aliquam sed sapien nisl? Nunc a lacus at risus semper sagittis. Duis placerat neque sed diam gravida eget tempor odio ornare! In in tortor nec metus feugiat molestie fermentum vulputate libero? Aliquam sed sapien nisl? Nunc a lacus at risus semper sagittis.",
+      "photo": "",
+      "social": {
+        "email": "deeandroid@skratchpadworldwide.com",
+        "fb": "",
+        "ig": "www.instagram.com/android"
+      }
+    },
+    "mista_b": {
+      "name": "DJ Mista B",
+      "crew": ["K-Sun", "FourOneFunk"],
+      "since": "2003",
+      "started": "",
+      "bio": "Ut ornare, ipsum sit amet interdum viverra, nisl sapien gravida sapien, porta pretium quam sem vel lectus. Maecenas laoreet, lectus vitae semper varius, libero lorem pharetra dui, in tincidunt sem risus eu nisi? Vestibulum commodo purus eu risus iaculis quis vulputate metus rhoncus. Duis placerat neque sed diam gravida eget tempor odio ornare! In in tortor nec metus feugiat molestie fermentum vulputate libero? Aliquam sed sapien nisl? Nunc a lacus at risus semper sagittis. Duis placerat neque sed diam gravida eget tempor odio ornare! In in tortor nec metus feugiat molestie fermentum vulputate libero? Aliquam sed sapien nisl? Nunc a lacus at risus semper sagittis.",
+      "photo": "../../assets/img/_profile/sf/mista_b.jpg",
+      "social": {
+        "email": "mistab@skratchpadworldwide.com",
+        "fb": "",
+        "ig": "",
+        "web": ""
+      }
+    },
+    "amerriica": {
+      "name": "DJ Amerriica",
+      "crew":["Analog Girlz"],
+      "since": "",
+      "started": "",
+      "bio": "",
+      "photo": "../../assets/img/_profile/sf/amerriica.jpg",
+      "social": {
+        "email": "amerriica@skratchpadworldwide.com",
+        "fb": "",
+        "ig": ""
+      }
+    },
+    "pone": {
+      "name": "DJ Pone",
+      "crew":["/'89 Skratch Gangstas" ],
+      "since": "2003",
+      "started": "1989",
+      "bio": "",
+      "photo": "../../assets/img/_profile/sf/pone.jpg",
+      "social": {
+        "email": "djpone@gmail.com",
+        "fb": "",
+        "ig": "",
+        "web": "http://www.djpone.com"
+      }
+    },
+    "robynn": {
+      "name": "DJ Robynn",
+      "since": "",
+      "started": "",
+      "bio": "",
+      "photo": "",
+      "social": {
+        "email": "",
+        "fb": ""
+      }
+    },
+    "traps": {
+      "name": "DJ Traps",
+      "crew":["MZK", "Funk Lab"],
+      "since": "",
+      "started": "",
+      "bio": "",
+      "photo": "",
+      "social": {
+        "email": "djtraps@gmail.com",
+        "fb": "",
+        "ig": "www.instagram.com/djtraps",
+        "web": "www.djtraps.com"
+      }
     }
-
-  }
+  },
+  "vegas": {
+    "vibe": {
+      "name": "DJ Vibe", 
+      "since": "", 
+      "started":"", 
+      "bio":"", 
+      "photo":"", 
+      "social":{
+        "email":"", 
+        "fb":"", 
+        "ig":"", 
+        "soundcloud":""
+      }
+    }
+  },
+  "dc": {
+    "alf":{
+      "name": "Alf One", 
+      "since":"", 
+      "started":"", 
+      "bio":"", 
+      "photo":"", 
+      "social": {
+        "email":"", 
+        "fb":"", 
+        "ig":"", 
+        "soundcloud":""
+      }
+    }, 
+    "as_one":{
+      "name": "DJ As-One", 
+      "since":"", 
+      "started":"", 
+      "bio":"", 
+      "photo":"", 
+      "social":{
+        "email":"", 
+        "fb":"", 
+        "ig":"", 
+        "soundcloud":""
+      }
+    }
+  },
+  "guests": {}
 }

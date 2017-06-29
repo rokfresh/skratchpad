@@ -54,6 +54,7 @@ a:hover {
   padding: 1rem; 
   // decor 
   background: #eee;
+  color: $color-e;
   box-shadow: 0 0 1rem -0.3rem $color-a; 
   border-radius: 5px;
   // display 
@@ -81,7 +82,7 @@ a:hover {
 }
 
 .multi-sp-bg-box {
-  background: $color-e;
+  background: $color-b;
   background-image: url("./assets/img/sp_logos/sp.bg_multi.logos_greys.png");
   background-size: 75%;
   background-repeat: repeat-x;

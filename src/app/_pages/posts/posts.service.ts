@@ -119,5 +119,4 @@ export class PostsService {
     console.log(beta);
   }
 
-  
 }

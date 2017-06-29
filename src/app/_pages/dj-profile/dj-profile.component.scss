@@ -1,0 +1,55 @@
+@import "../../../assets/lib/vixins";
+
+:host, 
+.profile-close,
+.profile-name, 
+.dj-name, 
+.profile-info {
+    display: flex;
+}
+
+:host {
+    color: #000;
+    flex-direction: column;
+    position: relative;
+}
+
+.profile-close {
+    // box
+    // display
+    justify-content: flex-end;
+    align-items: center;
+    // docor
+    background: #000;
+    color: #fff;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.profile-name {
+    background: $color-e;
+    height: auto;
+    padding: 0;
+    .dj-name {
+        // box
+        height: 100%; 
+        padding: 0 .4rem;
+        // decor
+        background: $color-d;
+        color: #fff; 
+        font-size: 2rem;
+        font-family: $font-philly;
+        
+    }
+
+}
+
+.profile-info {
+    
+    ul
+    {
+        padding: 0;
+      list-style-type: none;
+    }
+}

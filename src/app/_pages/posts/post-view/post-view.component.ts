@@ -9,7 +9,7 @@ import {NgbCarouselConfig} from '@ng-bootstrap/ng-bootstrap';
   selector: 'post-view',
   templateUrl: './post-view.component.html',
   styleUrls: ['./post-view.component.scss'],
-  providers: [PostsService, NgbCarouselConfig]
+  providers: [NgbCarouselConfig]
 })
 
 export class PostViewComponent implements OnInit {

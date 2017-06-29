@@ -53,6 +53,9 @@
     .chapter-crew {
       // box 
       width: 40%;
+      .crew-members{
+        list-style: none;
+      }
     }
   }
 }

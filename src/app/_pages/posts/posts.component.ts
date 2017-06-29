@@ -7,28 +7,13 @@ import "rxjs/Rx";
 @Component({
   selector: 'posts',
   templateUrl: './posts.component.html',
-  styleUrls: ['./posts.component.scss'],
-  providers: [PostsService]
+  styleUrls: ['./posts.component.scss']
 })
-
 
 export class PostsComponent implements OnInit {
   constructor(private postsService : PostsService) {}
   private postsData : Post[] = [];
   private bg_styles : {};
-  ngOnInit() {
-    // *** get recent posts *** //
-    this
-      .postsService
-      .getPosts()
-      .subscribe((res) => {
-        this
-          .postsService
-          .assignPostData(res, this.postsData);
-      });
-
-    // End OnInit
-  }
 
   setPostBg(post) {
     let sp_path = "./../../assets/img/sp_logos/";
@@ -39,7 +24,6 @@ export class PostsComponent implements OnInit {
       sp_path + "sp.logo_3d.oak.raiders_01.png",
       sp_path + "sp.logo_3d.oak.As_02.png"
     ];
-
     if (post.has_featured) {
       this.bg_styles = {
         "background-image": "url(\'" + post.feat_media.full + "\')",
@@ -47,9 +31,7 @@ export class PostsComponent implements OnInit {
         "background-repeat": "no-repeat",
         "background-position": "center"
       };
-
     } else if (post.has_media) {
-     
       this.bg_styles = {
         "background-image": "url(\'" + post.media[0].size.full + "\')",
         "background-size": "100% auto",
@@ -65,8 +47,17 @@ export class PostsComponent implements OnInit {
       };
     };
     return this.bg_styles;
-
   }
-
-
+  ngOnInit() {
+    // *** get recent posts *** //
+    this
+      .postsService
+      .getPosts()
+      .subscribe((res) => {
+        this
+          .postsService
+          .assignPostData(res, this.postsData);
+      });
+    // End OnInit
+  }
 }
